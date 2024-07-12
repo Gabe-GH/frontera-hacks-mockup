@@ -1,0 +1,60 @@
+.fronteraHacksLogo {
+    font-size: 1.85rem;
+    line-height: 2.15rem;
+}
+
+.dateText {
+    font-size: .85rem;
+    line-height: 1.25rem;
+}
+
+.hookText {
+    font-size: 1.075rem;
+    line-height: 1.75rem;
+    background: -moz-linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%);
+    background: linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block
+}
+
+.descriptionText {
+    font-size: .9rem;
+    line-height: 1.5rem;
+}
+
+.customBtnRadius::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: .75rem;
+    border: 2px solid transparent;
+    background: linear-gradient(90deg, rgba(255, 240, 161, 1) 0%, rgba(255, 176, 118, 1) 50%, rgba(255, 90, 80, 1) 100%) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+/* Fallback for browsers that do not support custom btn style */
+@supports not ((-webkit-mask: none) or (mask-type: alpha)) {
+    .customBtnRadius::before {
+        content: none;
+        /* Disable the pseudo-element */
+    }
+}
+
+.btnText {
+    font-size: .98rem;
+    line-height: 1.5rem;
+    background: -moz-linear-gradient(90deg, rgba(255, 240, 161, 1) 0%, rgba(255, 176, 118, 1) 50%, rgba(255, 90, 80, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 240, 161, 1) 0%, rgba(255, 176, 118, 1) 50%, rgba(255, 90, 80, 1) 100%);
+    background: linear-gradient(90deg, rgba(255, 240, 161, 1) 0%, rgba(255, 176, 118, 1) 50%, rgba(255, 90, 80, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}

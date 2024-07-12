@@ -1,18 +1,15 @@
+import DesktopNavbar from "./Navbar.desktop";
+import MobileNavbar from "./Navbar.mobile"
+
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-no-boxShadow bg-transparent">
-      <div className="navbar-start text-lg uppercase space-x-12">
-        <a className="navbar-item ml-32">about</a>
-        <a className="navbar-item">schedule</a>
-        <a className="navbar-item">challenges</a>
-        <a className="navbar-item">prizes</a>
-        <a className="navbar-item">faq</a>
-        </div>
-      <div className="navbar-end mr-32">
-        <button type="button" className="btn btn-outline">
-          Log In
-        </button>
+    <>
+      <div className="hidden md:flex w-screen">
+        <DesktopNavbar />
       </div>
-    </nav>
+      <div className="md:hidden">
+        <MobileNavbar />
+      </div>
+    </>
   );
 }
