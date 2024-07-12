@@ -4,12 +4,12 @@ import MobileNavbar from "./Navbar.mobile"
 export default function Navbar() {
   return (
     <>
-      <div className="hidden md:flex w-screen">
+      <nav className="hidden md:flex w-screen">
         <DesktopNavbar />
-      </div>
-      <div className="md:hidden">
+      </nav>
+      <nav className="md:hidden pt-11 w-screen">
         <MobileNavbar />
-      </div>
+      </nav>
     </>
   );
 }

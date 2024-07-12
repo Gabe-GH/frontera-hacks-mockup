@@ -40,12 +40,8 @@
     mask-composite: exclude;
 }
 
-/* Fallback for browsers that do not support custom btn style */
-@supports not ((-webkit-mask: none) or (mask-type: alpha)) {
-    .customBtnRadius::before {
-        content: none;
-        /* Disable the pseudo-element */
-    }
+.customBtnRadius:hover::before {
+    background: linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%) border-box;
 }
 
 .btnText {
@@ -57,4 +53,56 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+.customBtnRadius:hover .btnText {
+  background: -moz-linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%);
+  background: linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Fallback for browsers that do not support custom btn style */
+@supports not ((-webkit-mask: none) or (mask-type: alpha)) {
+    .customBtnRadius::before {
+        content: none;
+        /* Disable the pseudo-element */
+    }
+}
+
+@media (min-width:768px) {
+    .heroContainer {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .fronteraHacksLogo {
+        font-size: 4rem;
+        text-wrap: nowrap;
+    }
+
+    .dateText{
+        font-size: 1.25rem;
+    }
+
+    .hookText{
+        font-size: 1.85rem;
+    }
+
+    .descriptionText {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-right: 35%;
+    }
+
+    .fronteraLink {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .btnText {
+        font-size: 1.5rem;
+    }
 }

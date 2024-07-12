@@ -6,7 +6,7 @@ import Image from "next/image";
 // ***
 export default function MobileNavbar() {
   return (
-    <nav className="navbar navbar-no-boxShadow bg-transparent pt-11 mid:w-screen">
+    <nav className="navbar navbar-no-boxShadow bg-transparent">
       <div className="navbar-end">
         {/* for defining the side the drawer opens up from */}
         <input
