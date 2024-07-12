@@ -7,7 +7,7 @@ export default function Navbar() {
       <nav className="hidden md:flex w-screen">
         <DesktopNavbar />
       </nav>
-      <nav className="md:hidden pt-11 w-screen">
+      <nav className="md:hidden w-screen">
         <MobileNavbar />
       </nav>
     </>

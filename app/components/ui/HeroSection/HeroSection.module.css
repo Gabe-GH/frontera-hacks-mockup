@@ -25,6 +25,10 @@
     line-height: 1.5rem;
 }
 
+.customBtnRadius {
+    background-color: black;
+}
+
 .customBtnRadius::before {
     content: "";
     position: absolute;
@@ -38,6 +42,10 @@
     -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
+}
+
+.customBtnRadius:hover {
+    background-color: black;
 }
 
 .customBtnRadius:hover::before {
@@ -56,12 +64,12 @@
 }
 
 .customBtnRadius:hover .btnText {
-  background: -moz-linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%);
-  background: -webkit-linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%);
-  background: linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+    background: -moz-linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%);
+    background: linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 /* Fallback for browsers that do not support custom btn style */
@@ -83,11 +91,11 @@
         text-wrap: nowrap;
     }
 
-    .dateText{
+    .dateText {
         font-size: 1.25rem;
     }
 
-    .hookText{
+    .hookText {
         font-size: 1.85rem;
     }
 
