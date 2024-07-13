@@ -13,7 +13,7 @@ const frontera_logo_font = Bruno_Ace({
 
 export default function HeroSection() {
   return (
-    <hgroup className={`${styles.heroContainer} ml-10 my-20`}>
+    <hgroup className={`${styles.heroContainer} ml-10 mt-20`}>
       <Headers />
       <HookText />
       <div className={`flex mt-6 w-40 justify-between md:justify-between md:w-64`}>
@@ -52,7 +52,7 @@ const HookText = () => {
       build solutions for real-world problems at the 2nd hackathon hosted by{" "}
       <span>
         <Link
-          className={`${styles.fronteraLink} link link-underline hover:link-primary`}
+          className={`${styles.fronteraLink} link link-underline hover:text-blue-300`}
           href={`https://fronteradevs.com`}
         >
           Frontera Devs
