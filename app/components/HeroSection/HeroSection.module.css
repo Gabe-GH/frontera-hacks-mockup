@@ -44,10 +44,6 @@
     mask-composite: exclude;
 }
 
-.customBtnRadius:hover {
-    background-color: black;
-}
-
 .customBtnRadius:hover::before {
     background: linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%) border-box;
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-import Navbar from '@/app/components/ui/Navbar/Navbar';
+import Navbar from '@/app/components/Navbar/Navbar';
 
 const inter = Inter({ subsets: ["latin"] });
 const dm_sans = DM_Sans({

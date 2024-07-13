@@ -1,0 +1,59 @@
+.customBtnRadius {
+    /* background-color: black; */
+    border-radius: 90rem;
+}
+
+.customBtnRadius:hover {
+    background: linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%) border-box;
+}
+
+.discordIcon {
+    width: 3rem;
+}
+
+.discordIcon:hover {
+    /* filter: invert(50%) sepia(51%) saturate(7357%) hue-rotate(223deg) brightness(98%) contrast(93%); */
+}
+
+/* Fallback for browsers that do not support custom btn style */
+@supports not ((-webkit-mask: none) or (mask-type: alpha)) {
+    .customBtnRadius::before {
+        content: none;
+        /* Disable the pseudo-element */
+    }
+}
+
+@media (min-width:768px) {
+    .heroContainer {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .fronteraHacksLogo {
+        font-size: 4rem;
+        text-wrap: nowrap;
+    }
+
+    .dateText {
+        font-size: 1.25rem;
+    }
+
+    .hookText {
+        font-size: 1.85rem;
+    }
+
+    .descriptionText {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-right: 35%;
+    }
+
+    .fronteraLink {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .btnText {
+        font-size: 1.5rem;
+    }
+}

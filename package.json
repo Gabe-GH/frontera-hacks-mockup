@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dotenvx/dotenvx": "^1.6.2",
+    "dotenv": "^16.4.5",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-icons": "^5.2.1",
     "rippleui": "^1.12.1"
   },
   "devDependencies": {
