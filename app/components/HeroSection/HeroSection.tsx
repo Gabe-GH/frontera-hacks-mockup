@@ -16,13 +16,13 @@ export default function HeroSection() {
     <hgroup className={`${styles.heroContainer} ml-10 my-20`}>
       <Headers />
       <HookText />
-      <div className={`flex mt-6 justify-between w-64`}>
+      <div className={`flex mt-6 w-40 justify-between md:justify-between md:w-64`}>
         <RegisterBtn />
         <DiscordBtn />
       </div>
     </hgroup>
   );
-}
+};
 
 const Headers = () => {
   return (

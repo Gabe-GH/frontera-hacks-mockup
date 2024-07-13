@@ -10,7 +10,7 @@ export default function DiscordBtn() {
 
   return (
     <Link
-      className={`${styles.customBtnRadius} btn btn-ghost p-4 md:px-2 md:py-8`}
+      className={`${styles.customBtnRadius} btn btn-ghost px-1 py-2 md:px-2 md:py-8`}
       href={`${process.env.FRONTERA_DISCORD_INVITE}`}
     >
       <Image
