@@ -8,6 +8,13 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4543a0",endColorstr="#4543a0",GradientType=1);
 }
 
+.drawerLink:hover {
+        color: rgb(148, 148, 148);
+        cursor: pointer;
+        transition-duration: .15s;
+        transition-property: color;
+}
+
 @media (max-width:500) {
     .borderDecoration {
         border: none;

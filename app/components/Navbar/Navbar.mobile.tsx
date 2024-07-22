@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "./Navbar.mobile.module.css";
 
@@ -53,12 +54,29 @@ export default function MobileNavbar() {
             {/* menu items inside the drawer */}
             <div className="w-screen font-light">
               <hr className={`${styles.borderDecoration} my-4`} />
-              <h2 className="text-xl uppercase mr-8">about</h2>
-              <h2 className="text-xl uppercase mr-8 mt-4">schedule</h2>
+              <h2 className={`${styles.drawerLink} text-xl uppercase mr-8`}>
+                <Link href="/#about">about</Link>
+              </h2>
+              <h2
+                className={`${styles.drawerLink} text-xl uppercase mr-8 mt-4`}
+              >
+                <Link href="/#schedule">schedule</Link>
+              </h2>
               <hr className={`${styles.borderDecoration} my-4`} />
-              <h2 className="text-xl uppercase mr-8">challenges</h2>
-              <h2 className="text-xl uppercase mr-8 mt-4">prizes</h2>
-              <h2 className="text-xl uppercase mr-8 mt-4">faq</h2>
+              <h2 className={`${styles.drawerLink} text-xl uppercase mr-8`}>
+                <Link href="/#challenges">challenges</Link>
+              </h2>
+              <h2
+                className={`${styles.drawerLink} text-xl uppercase mr-8 mt-4`}
+              >
+                <Link href="/#prizes">prizes</Link>
+              </h2>
+              <h2
+                className={`${styles.drawerLink} text-xl uppercase mr-8 mt-4`}
+              >
+                <Link href="/#faq"></Link>
+                faq
+              </h2>
               <hr className={`${styles.borderDecoration} mb-14 my-4`} />
             </div>
           </div>
