@@ -1,0 +1,40 @@
+.borderDecoration {
+    border: none;
+    height: .075rem;
+    background: rgb(69,67,160);
+    background: -moz-linear-gradient(90deg, rgba(69,67,160,0) 70%, rgba(69,67,160,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(69,67,160,0) 70%, rgba(69,67,160,1) 100%);
+    background: linear-gradient(90deg, rgba(69,67,160,0) 70%, rgba(69,67,160,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4543a0",endColorstr="#4543a0",GradientType=1);
+}
+
+.drawerLink:hover {
+        color: rgb(148, 148, 148);
+        cursor: pointer;
+        transition-duration: .15s;
+        transition-property: color;
+}
+
+@media (max-width:500) {
+    .borderDecoration {
+        border: none;
+        height: .075rem;
+        background: rgb(69,67,160);
+        background: -moz-linear-gradient(90deg, rgba(69,67,160,0) 65%, rgba(69,67,160,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(69,67,160,0) 65%, rgba(69,67,160,1) 100%);
+        background: linear-gradient(90deg, rgba(69,67,160,0) 65%, rgba(69,67,160,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4543a0",endColorstr="#4543a0",GradientType=1);
+    }
+}
+
+@media (max-width:400) {
+    .borderDecoration {
+        border: none;
+        height: .075rem;
+        background: rgb(69,67,160);
+        background: -moz-linear-gradient(90deg, rgba(69,67,160,0) 50%, rgba(69,67,160,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(69,67,160,0) 50%, rgba(69,67,160,1) 100%);
+        background: linear-gradient(90deg, rgba(69,67,160,0) 50%, rgba(69,67,160,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4543a0",endColorstr="#4543a0",GradientType=1);
+    }
+}
