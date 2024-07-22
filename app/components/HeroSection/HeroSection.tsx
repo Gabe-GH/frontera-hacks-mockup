@@ -16,13 +16,15 @@ export default function HeroSection() {
     <hgroup className={`${styles.heroContainer} ml-10 mt-20`}>
       <Headers />
       <HookText />
-      <div className={`flex mt-6 w-40 justify-between md:justify-between md:w-64`}>
+      <div
+        className={`flex mt-6 w-40 justify-between md:justify-between md:w-64`}
+      >
         <RegisterBtn />
         <DiscordBtn />
       </div>
     </hgroup>
   );
-};
+}
 
 const Headers = () => {
   return (
@@ -47,16 +49,20 @@ const Headers = () => {
 
 const HookText = () => {
   return (
-    <p className={`${styles.descriptionText} font-light mr-16 sm:mr-44 md:mr-12 md:mb-3`}>
+    <p
+      className={`${styles.descriptionText} font-light mr-16 sm:mr-44 md:mr-12 md:mb-3`}
+    >
       Collaborate with peers to learn new skills, unleash your creativity and
       build solutions for real-world problems at the 2nd hackathon hosted by{" "}
       <span>
-        <Link
+        <a
           className={`${styles.fronteraLink} link link-underline hover:text-blue-300`}
           href={`https://fronteradevs.com`}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Frontera Devs
-        </Link>
+        </a>
       </span>
     </p>
   );
