@@ -74,8 +74,7 @@ export default function MobileNavbar() {
               <h2
                 className={`${styles.drawerLink} text-xl uppercase mr-8 mt-4`}
               >
-                <Link href="/#faq"></Link>
-                faq
+                <Link href="/#faq">faq</Link>
               </h2>
               <hr className={`${styles.borderDecoration} mb-14 my-4`} />
             </div>
