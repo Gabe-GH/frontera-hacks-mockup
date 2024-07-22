@@ -34,11 +34,11 @@ const Headers = () => {
         October 19-20, 2024
       </time>
       <h1
-        className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} my-4 md:my-10`}
+        className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mr-10 my-4 md:my-10`}
       >
         frontera hacks
       </h1>
-      <h2 className={`${styles.hookText} font-semibold mb-10`}>
+      <h2 className={`${styles.hookText} mr-10 font-semibold mb-10`}>
         Accelerate innovation in the RGV
       </h2>
     </>
@@ -47,7 +47,7 @@ const Headers = () => {
 
 const HookText = () => {
   return (
-    <p className={`${styles.descriptionText} font-light mr-12 mb-3`}>
+    <p className={`${styles.descriptionText} font-light mr-16 sm:mr-44 md:mr-12 md:mb-3`}>
       Collaborate with peers to learn new skills, unleash your creativity and
       build solutions for real-world problems at the 2nd hackathon hosted by{" "}
       <span>

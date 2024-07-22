@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "dotenvx run -- next dev --turbo",
+    "build": "dotenvx run -- next build",
+    "start": "dotenvx run -f .env.production -- next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@dotenvx/dotenvx": "^1.6.2",
+    "@dotenvx/dotenvx": "^1.6.4",
     "dotenv": "^16.4.5",
     "next": "14.2.4",
     "react": "^18",

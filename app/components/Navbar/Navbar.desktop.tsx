@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { TbBrandDiscord } from "react-icons/tb";
 
 import styles from './Navbar.desktop.module.css'
 

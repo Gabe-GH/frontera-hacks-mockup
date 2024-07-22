@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import styles from "./Navbar.mobile.module.css";
+
 // ***
 // can't be refactored because this whole component relies on rippleui's drawer component
 // using tailwind's properties
@@ -32,10 +34,8 @@ export default function MobileNavbar() {
 
         {/* everything beyond this point is for the drawer and it's content */}
         <div className="drawer drawer-right h-auto min-w-48 max-w-56 text-nowrap text-ellipsis">
-          
           {/* this is for handling the layout of the contents in the drawer */}
-          <div className="flex flex-col items-end h-full text-right">
-            
+          <div className="flex flex-col justify-end items-end h-full text-right">
             {/* for defining what closes the drawer*/}
             <label
               htmlFor="drawer-right"
@@ -52,14 +52,14 @@ export default function MobileNavbar() {
 
             {/* menu items inside the drawer */}
             <div className="w-screen font-light">
-              <hr className="my-4" />
+              <hr className={`${styles.borderDecoration} my-4`} />
               <h2 className="text-xl uppercase mr-8">about</h2>
               <h2 className="text-xl uppercase mr-8 mt-4">schedule</h2>
-              <hr className="my-4" />
+              <hr className={`${styles.borderDecoration} my-4`} />
               <h2 className="text-xl uppercase mr-8">challenges</h2>
               <h2 className="text-xl uppercase mr-8 mt-4">prizes</h2>
               <h2 className="text-xl uppercase mr-8 mt-4">faq</h2>
-              <hr className="mb-14 mt-4" />
+              <hr className={`${styles.borderDecoration} mb-14 my-4`} />
             </div>
           </div>
         </div>
