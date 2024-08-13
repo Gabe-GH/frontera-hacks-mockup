@@ -4,6 +4,7 @@ import { Bruno_Ace } from "next/font/google";
 import DiscordBtn from "../ui/DiscordBtn";
 
 import styles from "./HeroSection.module.css";
+import Image from 'next/image';
 
 const frontera_logo_font = Bruno_Ace({
   weight: "400",
@@ -21,6 +22,12 @@ export default function HeroSection() {
       >
         <RegisterBtn />
         <DiscordBtn />
+      </div>
+      <div>
+      <AboutSection />
+      </div>
+      <div>
+      <PillarsSection />
       </div>
     </hgroup>
   );
@@ -78,3 +85,72 @@ const RegisterBtn = () => {
     </Link>
   );
 };
+
+const AboutSection = () => {
+  return (
+    <>
+    <div className={'${styles.aboutSectionContainer} mt-36 md:mt-20'}>
+    <h1 
+    className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mr-10 my-4 md:my-10`}
+    > 
+    About 
+    </h1>
+    <p  
+    className={`${styles.descriptionText} font-light mx-auto md:mx-0 md:mr-12 md:mb-6 w-full`}
+    >
+      Frontera Hacks is a 24-hour hackathon that aims to foster a community of developers driven to innovate. At Frontera Hacks, we aim to provide an experience for developers of all skill levels to adopt skills taught outside of the classroom, collaborate with like-minded teams, and design projects with the potential to accelerate innovation in the Rio Grande Valley.
+    </p>
+    </div>
+    </>
+  );
+};
+
+const PillarsSection = () => {
+  return(
+  <>
+  <div className={'${styles.pillarsSection} mt-12 md:mt-20'}></div>
+  <h1 className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mr-10 my-4 md:my-10`}
+  >
+    Pillars
+  </h1>
+
+  <div className={styles.pillarsContainer}>
+    <div className={styles.pillar}>
+    <Image
+            src="/connect-pillar-image.png"
+            alt="Connect"
+            width={300} 
+            height={300}
+            className={styles.pillarImage}
+          />
+   <p className={styles.pillarCaption}>Connect</p>
+    </div>
+
+    <div className={styles.pillar}>
+    <Image
+            src="/grow-pillar-image.png"
+            alt="Grow"
+            width={300} 
+            height={300} 
+            className={styles.pillarImage}
+          />
+   <p className={styles.pillarCaption}>Grow</p>
+    </div>
+
+    <div className={styles.pillar}>
+    <Image
+            src="/build-pillar-image.png"
+            alt="Build"
+            width={300} 
+            height={300} 
+            className={styles.pillarImage}
+          />
+   <p className={styles.pillarCaption}>Build</p>
+    </div>
+  </div>
+  </>
+  );
+};
+
+
+
