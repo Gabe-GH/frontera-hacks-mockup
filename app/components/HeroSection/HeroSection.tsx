@@ -5,6 +5,7 @@ import DiscordBtn from "../ui/DiscordBtn";
 
 import styles from "./HeroSection.module.css";
 import Image from 'next/image';
+import { schedule } from "./schedule"; 
 
 const frontera_logo_font = Bruno_Ace({
   weight: "400",
@@ -28,6 +29,9 @@ export default function HeroSection() {
       </div>
       <div>
       <PillarsSection />
+      </div>
+      <div>
+      <ScheduleSection/>
       </div>
     </hgroup>
   );
@@ -89,7 +93,7 @@ const RegisterBtn = () => {
 const AboutSection = () => {
   return (
     <>
-    <div className={'${styles.aboutSectionContainer} mt-36 md:mt-20'}>
+    <div className={`mt-36 md:mt-20`}>
     <h1 
     className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mr-10 my-4 md:my-10`}
     > 
@@ -108,48 +112,90 @@ const AboutSection = () => {
 const PillarsSection = () => {
   return(
   <>
-  <div className={'${styles.pillarsSection} mt-12 md:mt-20'}></div>
+  <div className={`${styles.pillarsSection} mt-12 md:mt-20`}></div>
   <h1 className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mr-10 my-4 md:my-10`}
   >
     Pillars
   </h1>
 
-  <div className={styles.pillarsContainer}>
-    <div className={styles.pillar}>
+  <div className={'mt-24 flex w-full justify-center gap-x-12'}>
+
+    <div className={`flex flex-col items-center`}>
     <Image
             src="/connect-pillar-image.png"
             alt="Connect"
-            width={300} 
-            height={300}
+            width={150} 
+            height={150}
             className={styles.pillarImage}
           />
-   <p className={styles.pillarCaption}>Connect</p>
+   <div className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mt-2`}>Connect</div>
+    <div className={`mt-8 font-light lg:w-4/5`}>Meet developers interested in shaping 
+      the future of innovation at Frontera Hacks</div>
     </div>
 
-    <div className={styles.pillar}>
+    <div className={`flex flex-col items-center`}>
     <Image
             src="/grow-pillar-image.png"
             alt="Grow"
-            width={300} 
-            height={300} 
+            width={150} 
+            height={150} 
             className={styles.pillarImage}
           />
-   <p className={styles.pillarCaption}>Grow</p>
+   <div className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mt-2`}>Grow</div>
+   <div className={`mt-8 font-light lg:w-4/5`}>Advance your technical and interpersonal skills through our hands-on workshops</div>
     </div>
 
-    <div className={styles.pillar}>
+    <div className={`flex flex-col items-center`}>
     <Image
             src="/build-pillar-image.png"
             alt="Build"
-            width={300} 
-            height={300} 
+            width={150} 
+            height={150} 
             className={styles.pillarImage}
           />
-   <p className={styles.pillarCaption}>Build</p>
+   <div className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mt-2`}>Build</div>
+   <div className={`mt-8 font-light lg:w-4/5`}>Develop solutions with the potential to aid and impact our community</div>
     </div>
   </div>
   </>
   );
+};
+
+const ScheduleSection = () => {
+
+  return(
+    
+    <div className={`mt-36 md:mt-20 w-full`}>
+     <h1 className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mr-10 my-4 md:my-10`}
+  >
+    Schedule
+  </h1>
+
+<div className= {` mt-12 w-full flex gap-x-16`}>
+
+{schedule.map((day,idx)=>(<div key={idx} className= {`w-3/4`}> 
+  <span className={`text-xl`}>Day {day.dayNumber} - {day.date}</span>
+ {
+  day.events.map((evnt,idx)=> ( <div key={idx} className= {`flex w-full whitespace-nowrap mt-3 justify-between`}>
+
+ <div className="w-40">
+  {evnt.time}
+ </div>
+
+ <div className= {`flex w-full flex-col items-start justify-start`}>
+  {evnt.eventName}
+ </div>
+    </div>))
+ }
+
+</div>))}
+
+
+</div>
+</div>
+
+  );
+
 };
 
 
