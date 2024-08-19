@@ -1,7 +1,8 @@
 .fronteraHacksLogo {
-    font-size: 1.85rem;
-    line-height: 2.15rem;
+    font-size: 80px; /*1.85rem;*/
+    line-height: 122%; /*2.15rem;*/
 }
+
 
 .dateText {
     font-size: .85rem;

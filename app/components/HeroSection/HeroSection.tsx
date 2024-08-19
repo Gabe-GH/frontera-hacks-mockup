@@ -13,6 +13,7 @@ const frontera_logo_font = Bruno_Ace({
   display: "swap",
 });
 
+
 export default function HeroSection() {
   return (
     <hgroup className={`${styles.heroContainer} ml-10 mt-20`}>
@@ -32,6 +33,9 @@ export default function HeroSection() {
       </div>
       <div>
       <ScheduleSection/>
+      </div>
+      <div>
+        <SponsorsSection/>
       </div>
     </hgroup>
   );
@@ -95,7 +99,7 @@ const AboutSection = () => {
     <>
     <div className={`mt-36 md:mt-20`}>
     <h1 
-    className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mr-10 my-4 md:my-10`}
+    className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
     > 
     About 
     </h1>
@@ -113,7 +117,7 @@ const PillarsSection = () => {
   return(
   <>
   <div className={`${styles.pillarsSection} mt-12 md:mt-20`}></div>
-  <h1 className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mr-10 my-4 md:my-10`}
+  <h1 className={` ${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
   >
     Pillars
   </h1>
@@ -128,8 +132,8 @@ const PillarsSection = () => {
             height={150}
             className={styles.pillarImage}
           />
-   <div className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mt-2`}>Connect</div>
-    <div className={`mt-8 font-light lg:w-4/5`}>Meet developers interested in shaping 
+   <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>Connect</div>
+    <div className={`mt-5 font-light lg:w-4/5`}>Meet developers interested in shaping 
       the future of innovation at Frontera Hacks</div>
     </div>
 
@@ -141,8 +145,8 @@ const PillarsSection = () => {
             height={150} 
             className={styles.pillarImage}
           />
-   <div className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mt-2`}>Grow</div>
-   <div className={`mt-8 font-light lg:w-4/5`}>Advance your technical and interpersonal skills through our hands-on workshops</div>
+   <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>Grow</div>
+   <div className={`mt-5 font-light lg:w-4/5`}>Advance your technical and interpersonal skills through our hands-on workshops</div>
     </div>
 
     <div className={`flex flex-col items-center`}>
@@ -153,8 +157,8 @@ const PillarsSection = () => {
             height={150} 
             className={styles.pillarImage}
           />
-   <div className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mt-2`}>Build</div>
-   <div className={`mt-8 font-light lg:w-4/5`}>Develop solutions with the potential to aid and impact our community</div>
+   <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>Build</div>
+   <div className={`mt-5 font-light lg:w-4/5`}>Develop solutions with the potential to aid and impact our community</div>
     </div>
   </div>
   </>
@@ -166,7 +170,7 @@ const ScheduleSection = () => {
   return(
     
     <div className={`mt-36 md:mt-20 w-full`}>
-     <h1 className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mr-10 my-4 md:my-10`}
+     <h1 className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
   >
     Schedule
   </h1>
@@ -195,6 +199,46 @@ const ScheduleSection = () => {
 </div>
 
   );
+
+};
+
+const SponsorsSection= () => {
+  return(
+    <div className= {`mt-36`}>
+      <h1 
+    className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+    > 
+    Sponsors 
+    </h1>
+    <p className={`font-light text-sm justify-self-center text-center`}
+    >
+      Frontera Hacks is made possible by our wonderful sponsors.
+    </p>
+    <div className={`mt-12 flex justify-center gap-x-12`}>
+      <div>
+        <Image
+        src="/sponsors/Heb.png"
+        alt=""
+        width={152} 
+        height={59}
+        className={``}
+        />
+      </div>
+      <div>
+        <Image
+         src="/sponsors/Galaxy.png"
+         alt=""
+         width={200} 
+         height={50}
+         className={``}
+        />
+      </div>
+
+    </div>
+
+
+    </div>
+  )
 
 };
 
