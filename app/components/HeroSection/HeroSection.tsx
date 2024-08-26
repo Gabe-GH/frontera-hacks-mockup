@@ -235,6 +235,19 @@ const SponsorsSection= () => {
       </div>
 
     </div>
+    <p className={`mt-20 font-light text-sm justify-self-center text-center`}
+    >
+      Want to help make this event a reality?
+       </p>
+
+       <Link
+      className={`mt-5 btn`}
+      href="mailto:fronteradevs@gmail.com"
+    >
+      <p className={`font-light text-sm align-middle`}>
+        BECOME A SPONSOR </p>
+    </Link>
+
 
 
     </div>
