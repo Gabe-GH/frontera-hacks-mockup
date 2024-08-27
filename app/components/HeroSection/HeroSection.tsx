@@ -41,6 +41,9 @@ export default function HeroSection() {
       <div>
         <SponsorsSection/>
       </div>
+      <div>
+        <TeamSection/>
+      </div>
     </hgroup>
   );
 }
@@ -259,5 +262,27 @@ const SponsorsSection= () => {
 
 };
 
+const TeamSection = () => {
+return(
+  <div>
+     <h1 
+    className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+    > 
+    Team 
+    </h1>
+
+    <p className={`font-light text-sm justify-self-center text-center`}>
+    Our team is a vibrant mix of passionate students, each bringing their own unique flavor to the table. Together, we've blended our skills and creativity to brew up an unforgettable hackathon experience. We're here to support, inspire, and cheer you on every step of the way. Feel free to connect with us on LinkedIn!
+    </p>
+
+  </div>
+)
+
+};
+
+const FaqSection = () => {
+
+  
+};
 
 
