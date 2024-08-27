@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Bruno_Ace } from "next/font/google";
+import { Bruno_Ace, Hanken_Grotesk } from "next/font/google";
 
 import DiscordBtn from "../ui/DiscordBtn";
 
@@ -12,6 +12,10 @@ const frontera_logo_font = Bruno_Ace({
   subsets: ["latin"],
   display: "swap",
 });
+
+const sponsor_button_font= Hanken_Grotesk({
+  weight: "400"
+})
 
 
 export default function HeroSection() {
@@ -240,16 +244,16 @@ const SponsorsSection= () => {
       Want to help make this event a reality?
        </p>
 
+    <div className={`mt-4`}>
+
        <Link
-      className={`mt-5 btn`}
+      className={`bg-white text-black border border-white rounded-full py-1 px-4 block text-center max-w-44 mx-auto`}
       href="mailto:fronteradevs@gmail.com"
     >
-      <p className={`font-light text-sm align-middle`}>
+      <p className={`${sponsor_button_font.className} text-xs`}>
         BECOME A SPONSOR </p>
     </Link>
-
-
-
+    </div>
     </div>
   )
 
