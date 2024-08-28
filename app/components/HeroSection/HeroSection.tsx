@@ -44,7 +44,14 @@ export default function HeroSection() {
       <div>
         <TeamSection/>
       </div>
+      <div>
+        <FaqSection/>
+      </div>
+      <div>
+        <VenueSection/>
+      </div>
     </hgroup>
+
   );
 }
 
@@ -281,8 +288,81 @@ return(
 };
 
 const FaqSection = () => {
+return(
+  <div>
+     <h1 
+    className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+    > 
+    Fequently Asked Questions 
+    </h1>
 
-  
+    <div className={'mt-10 grid grid-cols-2 justify-center gap-x-12'}>
+      
+      <div className={`flex flex-col`}>
+      What is a hackathon?
+        <div className={`text-sm`}>
+        A hackathon is a sprint-like event where developers collaborate to build projects that solve challenges. At Frontera Hacks, 
+        hackers can look forward to educational workshops, learning from skilled mentors, and, of course, fun games and great swag.
+        </div>
+      </div>
+
+      <div className={`flex flex-col`}>
+      What is the cost to participate?
+        <div className={`text-sm`}>
+        Nada, nothing, zilch. There is absolutely no cost for applying or participating in Frontera Hacks. 
+        We want to make this event as accessible as possible to all those interested so make sure you apply!
+        </div>
+      </div>
+
+      <div className={`mt-5 flex flex-col`}>
+      Who is this event for?
+        <div className={`text-sm`}>
+        Students from all backgrounds are welcome at Frontera Hacks. No extensive knowledge of programming is necessary.
+        </div>
+      </div>
+
+      <div className={` mt-5 flex flex-col`}>
+      What if I don’t know how to code?
+        <div className={`text-sm`}>
+        No experience is needed — whether you're a coder, an artist, a designer, or a writer, 
+        you'll get a chance to work with various mentors, attend workshops, interact with companies, and learn alongside fellow participants.
+        </div>
+      </div>
+
+      <div className={`flex flex-col`}>
+      Do I need a team to participate?
+        <div className={`text-sm`}>
+        While teams are not required in order to participate, it’s a great way to meet new people and create something together. 
+        Teams may have up to 4 members, and you will have a chance to meet other hackers at our Team Formation events and in the Discord server!
+        </div>
+      </div>
+
+      <div className={`mt-5 flex flex-col`}>
+      What if I need special accomodations?
+        <div className={`text-sm`}>
+        Frontera Hacks prioritizes accessibility and accomodations that make our event welcoming for everyone. 
+        Please list any special accommodations in your admissions, or contact us with any other concerns.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+) 
 };
+
+const VenueSection= () => {
+  return(
+    <div>
+
+      <h1 
+    className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+    > 
+    Venue 
+    </h1>
+
+    </div>
+  )
+}
 
 
