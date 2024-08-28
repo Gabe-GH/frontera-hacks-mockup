@@ -42,10 +42,10 @@ export default function HeroSection() {
         <SponsorsSection/>
       </div>
       <div>
-        <TeamSection/>
+        <FaqSection/>
       </div>
       <div>
-        <FaqSection/>
+        <TeamSection/>
       </div>
       <div>
         <VenueSection/>
@@ -360,6 +360,41 @@ const VenueSection= () => {
     > 
     Venue 
     </h1>
+
+    <div>
+        <Image
+        src= "/veune_location_title.png"
+        alt=""
+        width={1157} 
+        height={158}
+        className={``}
+        />
+        <h1 className= {`absolute inset-0 flex items-center justify-center text-white text-2xl font-bold`}>
+        UTRGV Edinburg Engineering Building (EENGR)
+        </h1>  
+
+      </div>
+
+      <div className={`relative w-[800px] h-[470px]`}>
+          <Image 
+          src= "/map-cropped.png"
+          alt="Map"
+          width={800} 
+          height={470}
+          className={`absolute top-0 left-0`}
+          />
+
+          <Image 
+          src= "/weird-shape.png"
+          alt="Border"
+          width={800} 
+          height={470}
+          className={`absolute top-0 left-0 pointer-events-none`}
+          />
+
+          </div>
+
+
 
     </div>
   )
