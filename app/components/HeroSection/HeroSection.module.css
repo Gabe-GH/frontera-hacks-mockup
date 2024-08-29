@@ -69,6 +69,10 @@
     color: transparent;
 }
 
+.venueFaqText{
+    color: rgba(204,105,234);
+}
+
 /* Fallback for browsers that do not support custom btn style */
 @supports not ((-webkit-mask: none) or (mask-type: alpha)) {
     .customBtnRadius::before {
@@ -148,26 +152,3 @@
     font-size: 1rem;
 }
 
-/* For venue section*/
-
-.image-container {
-    position: relative;
-    width: 848px; /* Adjust as needed */
-    height: 512px; /* Adjust as needed */
-  }
-  
-  .base-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  
-  .overlay-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    pointer-events: none; /* Optional: Prevents interaction with the overlay */
-  }
-  

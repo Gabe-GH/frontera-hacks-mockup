@@ -361,7 +361,7 @@ const VenueSection= () => {
     Venue 
     </h1>
 
-    <div>
+    <div className={`relative`}>
         <Image
         src= "/veune_location_title.png"
         alt=""
@@ -369,32 +369,47 @@ const VenueSection= () => {
         height={158}
         className={``}
         />
-        <h1 className= {`absolute inset-0 flex items-center justify-center text-white text-2xl font-bold`}>
+        <h1 className= {`absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold whitespace-nowrap`}>
         UTRGV Edinburg Engineering Building (EENGR)
         </h1>  
 
       </div>
 
-      <div className={`relative w-[800px] h-[470px]`}>
+<div className={``}>
+      <div className={`top-[-30px] left-[-5px] relative`}>
           <Image 
           src= "/map-cropped.png"
           alt="Map"
-          width={800} 
-          height={470}
+          width={700} 
+          height={450}
           className={`absolute top-0 left-0`}
           />
 
           <Image 
           src= "/weird-shape.png"
           alt="Border"
-          width={800} 
-          height={470}
+          width={700} 
+          height={450}
           className={`absolute top-0 left-0 pointer-events-none`}
           />
-
           </div>
 
+          <div className={`ml-96 flex flex-col justify-center`}>
+          <h1 className={`${frontera_logo_font.className}  ${styles.venueFaqText} mt-1 text-2xl ml-80`}> Where do I park?</h1>
+          <p className={`mt-1 ml-80 max-w-60`}>
+          Lots E16 or E21 are closest to the Engineering 
+          building. These are along 4th Ave.
+             </p>
+          <h1 className={`${frontera_logo_font.className} ${styles.venueFaqText} mt-16 text-2xl ml-72 `}>Extra Information</h1>
+          <p className={`mt-1 ml-64 max-w-80`}>
+          Enter through the door closest to the science building. Check-in will be in the lobby. 
+          The building has ample space and internet connectivity. 
+          Here, you will work with a team to bring your ideas to life! Happy hacking!
+            </p>
+        </div>
 
+
+      </div>
 
     </div>
   )
