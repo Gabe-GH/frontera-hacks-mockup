@@ -6,6 +6,7 @@ import DiscordBtn from "../ui/DiscordBtn";
 import styles from "./HeroSection.module.css";
 import Image from 'next/image';
 import { schedule } from "./schedule"; 
+import { profiles } from "./team";
 
 const frontera_logo_font = Bruno_Ace({
   weight: "400",
@@ -210,6 +211,7 @@ const ScheduleSection = () => {
 
 
 </div>
+
 </div>
 
   );
@@ -282,9 +284,17 @@ return(
     Our team is a vibrant mix of passionate students, each bringing their own unique flavor to the table. Together, we've blended our skills and creativity to brew up an unforgettable hackathon experience. We're here to support, inspire, and cheer you on every step of the way. Feel free to connect with us on LinkedIn!
     </p>
 
+<div className={`flex justify-center space-x-4`}>
+{profiles.map((profile,idx)=> (
+  
+  <div key={idx} className= {``}>
+    <img src={profile.folderPath} alt={`Profile ${idx + 1}`} />
   </div>
-)
+))}
+</div>
 
+ </div>
+ )
 };
 
 const FaqSection = () => {
