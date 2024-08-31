@@ -287,8 +287,15 @@ return(
 <div className={`flex justify-center space-x-4`}>
 {profiles.map((profile,idx)=> (
   
-  <div key={idx} className= {``}>
-    <img src={profile.folderPath} alt={`Profile ${idx + 1}`} />
+  <div key={idx} className= {`w-full`}>
+    <a href={profile.url} target="_blank" rel="noopener noreferrer">
+    <Image 
+        src={`profile.folderPath`}
+        alt={`Profile ${idx + 1}`}
+        width={160}
+        height={170}
+    />
+    </a>
   </div>
 ))}
 </div>
