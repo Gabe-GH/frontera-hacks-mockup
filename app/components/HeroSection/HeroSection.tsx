@@ -284,16 +284,15 @@ return(
     Our team is a vibrant mix of passionate students, each bringing their own unique flavor to the table. Together, we've blended our skills and creativity to brew up an unforgettable hackathon experience. We're here to support, inspire, and cheer you on every step of the way. Feel free to connect with us on LinkedIn!
     </p>
 
-<div className={`flex justify-center space-x-4`}>
+<div className={`grid grid-cols-7 grid-rows-2`}>
 {profiles.map((profile,idx)=> (
   
-  <div key={idx} className= {`w-full`}>
+  <div key={idx} className= {``}>
     <a href={profile.url} target="_blank" rel="noopener noreferrer">
-    <Image 
-        src={`profile.folderPath`}
+    <img 
+        src={profile.folderPath}
         alt={`Profile ${idx + 1}`}
-        width={160}
-        height={170}
+       style={{width: '160px', height: '170px'}}
     />
     </a>
   </div>
