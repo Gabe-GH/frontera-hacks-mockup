@@ -197,11 +197,11 @@ const ScheduleSection = () => {
  {
   day.events.map((evnt,idx)=> ( <div key={idx} className= {`flex w-full whitespace-nowrap mt-3 justify-between`}>
 
- <div className="w-40">
+ <div className={`w-40 ${idx === 0 ? 'text-gray-400' : ''}`}>
   {evnt.time}
  </div>
 
- <div className= {`flex w-full flex-col items-start justify-start`}>
+ <div className= {`flex w-full flex-col items-start justify-start ${idx === 0 ? 'text-gray-400' : ''}`}>
   {evnt.eventName}
  </div>
     </div>))
@@ -315,7 +315,7 @@ return(
     <div className={'mt-10 grid grid-cols-2 justify-center gap-x-12'}>
       
       <div>
-      <div className={`${styles.subtitleText} flex flex-col`}>
+      <div className={`${styles.subtitleText} flex flex-col text-xl font-bold`}>
       What is a hackathon?
       </div>
       <div className={`text-sm`}>
@@ -325,7 +325,7 @@ return(
       </div>
 
       <div>
-      <div className={`${styles.subtitleText} flex flex-col`}>
+      <div className={`${styles.subtitleText} flex flex-col text-xl font-bold`}>
       What is the cost to participate?
       </div>
       <div className={`text-sm`}>
@@ -335,7 +335,7 @@ return(
       </div>
 
       <div>
-      <div className={`${styles.subtitleText} mt-5 flex flex-col`}>
+      <div className={`${styles.subtitleText} mt-5 flex flex-col text-xl font-bold`}>
       Who is this event for?
       </div>
       <div className={`text-sm`}>
@@ -344,7 +344,7 @@ return(
       </div>
 
       <div>
-      <div className={` ${styles.subtitleText} mt-5 flex flex-col`}>
+      <div className={` ${styles.subtitleText} mt-5 flex flex-col text-xl font-bold`}>
       What if I don’t know how to code?
       </div>
       <div className={`text-sm`}>
@@ -354,7 +354,7 @@ return(
       </div>
 
       <div>
-      <div className={`${styles.subtitleText} flex flex-col`}>
+      <div className={`${styles.subtitleText} flex flex-col text-xl font-bold`}>
       Do I need a team to participate?
       </div>
       <div className={`text-sm`}>
@@ -364,7 +364,7 @@ return(
       </div>
 
       <div>
-      <div className={`${styles.subtitleText} mt-5 flex flex-col`}>
+      <div className={`${styles.subtitleText} mt-5 flex flex-col text-xl font-bold`}>
       What if I need special accomodations?
       </div>
       <div className={`text-sm`}>
@@ -397,7 +397,7 @@ const VenueSection= () => {
         height={158}
         className={``}
         />
-        <h1 className= {`absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold whitespace-nowrap`}>
+        <h1 className= {`${styles.subtitleText} absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold whitespace-nowrap`}>
         UTRGV Edinburg Engineering Building (EENGR)
         </h1>  
 
