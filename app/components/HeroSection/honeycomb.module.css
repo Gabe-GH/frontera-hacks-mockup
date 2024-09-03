@@ -1,0 +1,8 @@
+.grid_temp {
+    justify-items: center;
+    grid-template-columns: repeat(14, minmax(5rem, 1fr));
+}
+
+.items {
+  margin-bottom: -2.5rem;  
+}
