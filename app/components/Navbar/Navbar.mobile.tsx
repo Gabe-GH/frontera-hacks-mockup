@@ -73,13 +73,15 @@ export default function MobileNavbar() {
               <hr className={`${styles.borderDecoration} my-4`} />
 
               {/* Challenge Link */}
-              <h2 className={`${styles.drawerLink} text-xl uppercase mr-8`}>
+              <h2
+                className={`${styles.drawerLink} text-xl uppercase mr-8 hidden`}
+              >
                 <Link href="/#challenges">challenges</Link>
               </h2>
 
               {/* Prizes Link */}
               <h2
-                className={`${styles.drawerLink} text-xl uppercase mr-8 mt-4`}
+                className={`${styles.drawerLink} text-xl uppercase mr-8 mt-4 hidden`}
               >
                 <Link href="/#prizes">prizes</Link>
               </h2>

@@ -27,8 +27,6 @@ const sponsor_button_font = Hanken_Grotesk({
 });
 
 export default function HeroSection() {
-  console.log(useUser());
-
   return (
     <div className={`${styles.heroContainer} mx-10 mt-20 h-screen`}>
       <div className="min-h-screen -mb-50">
@@ -111,7 +109,7 @@ const HookText = () => {
 const AboutSection = () => {
   return (
     <>
-      <div className={`mt-36 md:mt-20`}>
+      <div className={`mt-36 md:pt-20`} id="about">
         <h1
           className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
         >
@@ -199,7 +197,7 @@ const PillarsSection = () => {
 
 const ScheduleSection = () => {
   return (
-    <div className={`mt-36 md:mt-20 w-full`}>
+    <div className={`pt-36 md:mt-20 w-full`} id="schedule">
       <h1
         className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
       >
@@ -235,7 +233,7 @@ const ScheduleSection = () => {
 
 const SponsorsSection = () => {
   return (
-    <div className={`mt-36 mb-36`}>
+    <div className={`mt-36`}>
       <h1
         className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
       >
@@ -381,7 +379,7 @@ const FaqSection = () => {
   const faqStyle = "font-black text-xl underline underline-offset-4 mb-1";
 
   return (
-    <div className="pb-40 lg:pb-0 lg:mb-40">
+    <div className="pb-40 lg:pb-0 lg:mb-40 pt-20" id="faq">
       <h1
         className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
       >

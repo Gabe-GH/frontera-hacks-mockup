@@ -22,10 +22,16 @@ export default function DesktopNavbar(props: any) {
         <Link href="/#schedule" className={`${styles.linkStyle} navbar-item`}>
           schedule
         </Link>
-        <Link href="/#challenges" className={`${styles.linkStyle} navbar-item`}>
+        <Link
+          href="/#challenges"
+          className={`${styles.linkStyle} navbar-item hidden`}
+        >
           challenges
         </Link>
-        <Link href="/#prizes" className={`${styles.linkStyle} navbar-item`}>
+        <Link
+          href="/#prizes"
+          className={`${styles.linkStyle} navbar-item hidden`}
+        >
           prizes
         </Link>
         <Link href="/#faq" className={`${styles.linkStyle} navbar-item`}>
