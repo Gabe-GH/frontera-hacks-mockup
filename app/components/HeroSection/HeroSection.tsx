@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Bruno_Ace, Hanken_Grotesk } from "next/font/google";
+import { Bruno_Ace, Hanken_Grotesk, Pontano_Sans } from "next/font/google";
 
 import DiscordBtn from "../ui/DiscordBtn";
 
@@ -18,38 +18,38 @@ const sponsor_button_font= Hanken_Grotesk({
   weight: "400"
 })
 
+const footer_font= Pontano_Sans({
+  weight: "300"
+})
+
 
 export default function HeroSection() {
   return (
-    <hgroup className={`${styles.heroContainer} ml-10 mt-20`}>
-      <Headers />
-      <HookText />
-      <div
-        className={`flex mt-6 w-40 justify-between md:justify-between md:w-64`}
-      >
-        <RegisterBtn />
-        <DiscordBtn />
-      </div>
+    <hgroup className={`mt-20 w-full`}>
+     <div className="bg-geometricBg bg-no-repeat w-full flex flex-col items-center bg-cover bg-center">
+   <div className="md:w-3/4 w-full">
+   <Headers />
+   <HookText />
+     <div
+       className={`flex mt-6 w-40 justify-between md:justify-between md:w-64`}
+     >
+       <RegisterBtn />
+       <DiscordBtn />
+     </div>
+     <AboutSection />
+     <PillarsSection />
+   </div>
+     </div>
+     <div className="bg-starBg bg-repeat flex flex-col items-center bg-auto bg-center">
+     <div className="md:w-3/4 w-full">
+     <ScheduleSection/>
+     <SponsorsSection/>
+     <FaqSection/>
+     <TeamSection/>
+     <VenueSection/>
+     </div></div>
       <div>
-      <AboutSection />
-      </div>
-      <div>
-      <PillarsSection />
-      </div>
-      <div>
-      <ScheduleSection/>
-      </div>
-      <div>
-        <SponsorsSection/>
-      </div>
-      <div>
-        <FaqSection/>
-      </div>
-      <div>
-        <TeamSection/>
-      </div>
-      <div>
-        <VenueSection/>
+        <Footer/>
       </div>
     </hgroup>
 
@@ -58,7 +58,7 @@ export default function HeroSection() {
 
 const Headers = () => {
   return (
-    <>
+    <div className="min-w-full">
       <time
         dateTime="2024-10-19"
         className={`${styles.dateText} text-date-grey font-bold`}
@@ -73,7 +73,7 @@ const Headers = () => {
       <h2 className={`${styles.hookText} mr-10 font-semibold mb-10`}>
         Accelerate innovation in the RGV
       </h2>
-    </>
+    </div>
   );
 };
 
@@ -111,7 +111,7 @@ const RegisterBtn = () => {
 
 const AboutSection = () => {
   return (
-    <>
+    <div className="w-full">
     <div className={`mt-36 md:mt-20`}>
     <h1 
     className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
@@ -124,7 +124,7 @@ const AboutSection = () => {
       Frontera Hacks is a 24-hour hackathon that aims to foster a community of developers driven to innovate. At Frontera Hacks, we aim to provide an experience for developers of all skill levels to adopt skills taught outside of the classroom, collaborate with like-minded teams, and design projects with the potential to accelerate innovation in the Rio Grande Valley.
     </p>
     </div>
-    </>
+    </div>
   );
 };
 
@@ -190,7 +190,7 @@ const ScheduleSection = () => {
     Schedule
   </h1>
 
-<div className= {` mt-12 w-full flex gap-x-16`}>
+<div className= {` mt-12 w-full flex max-md:flex-col gap-x-16`}>
 
 {schedule.map((day,idx)=>(<div key={idx} className= {`w-3/4`}> 
   <span className={`${styles.subtitleText} text-xl`}>Day {day.dayNumber} - {day.date}</span>
@@ -220,7 +220,7 @@ const ScheduleSection = () => {
 
 const SponsorsSection= () => {
   return(
-    <div className= {`mt-36`}>
+    <div className= {`mt-36 w-full`}>
       <h1 
     className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
     > 
@@ -391,24 +391,24 @@ const VenueSection= () => {
 
     <div className={`relative`}>
         <Image
-        src= "/veune_location_title.png"
+        src= "/venue_location_border.png"
         alt=""
         width={1157} 
         height={158}
-        className={``}
+        className={`relative`}
         />
-        <h1 className= {`${styles.subtitleText} absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold whitespace-nowrap`}>
+        <h1 className= {`${styles.subtitleText} absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white md:text-4xl max-md:tracking-wide font-bold whitespace-nowrap`}>
         UTRGV Edinburg Engineering Building (EENGR)
         </h1>  
 
       </div>
 
 <div className={``}>
-      <div className={`top-[-30px] left-[-5px] relative`}>
+      <div className={`top-[-30px] max-lg:h-80 left-[-5px] relative`}>
           <Image 
           src= "/map-cropped.png"
           alt="Map"
-          width={700} 
+          width={600} 
           height={450}
           className={`absolute top-0 left-0`}
           />
@@ -416,20 +416,20 @@ const VenueSection= () => {
           <Image 
           src= "/weird-shape.png"
           alt="Border"
-          width={700} 
+          width={600} 
           height={450}
           className={`absolute top-0 left-0 pointer-events-none`}
           />
           </div>
 
-          <div className={`ml-96 flex flex-col justify-center`}>
-          <h1 className={`${frontera_logo_font.className}  ${styles.venueFaqText} mt-1 text-2xl ml-80`}> Where do I park?</h1>
-          <p className={`mt-1 ml-80 max-w-60`}>
+          <div className={`lg:ml-96 flex flex-col justify-center`}>
+          <h1 className={`${frontera_logo_font.className}  ${styles.venueFaqText} max-lg:mt-5  mt-1 text-2xl lg:ml-80`}> Where do I park?</h1>
+          <p className={`mt-1 lg:ml-80 max-w-60`}>
           Lots E16 or E21 are closest to the Engineering 
           building. These are along 4th Ave.
              </p>
-          <h1 className={`${frontera_logo_font.className} ${styles.venueFaqText} mt-16 text-2xl ml-72 `}>Extra Information</h1>
-          <p className={`mt-1 ml-64 max-w-80`}>
+          <h1 className={`${frontera_logo_font.className} ${styles.venueFaqText} lg:mt-16 mt-5 text-2xl lg:ml-72 `}>Extra Information</h1>
+          <p className={`mt-1 lg:ml-64 max-w-80`}>
           Enter through the door closest to the science building. Check-in will be in the lobby. 
           The building has ample space and internet connectivity. 
           Here, you will work with a team to bring your ideas to life! Happy hacking!
@@ -439,6 +439,84 @@ const VenueSection= () => {
 
       </div>
 
+    </div>
+  )
+}
+
+const Footer= () => {
+  return(
+    <div>
+    <div className={`${frontera_logo_font.className} mt-40 text-center text-4xl`}>
+      <h1>
+        frontera hacks
+      </h1>
+      
+
+    </div>
+    <div className={`mt-5 flex flex-row justify-center gap-x-10`}>
+
+      <a href="https://discord.gg/XfjsWxPgBj">
+        <Image
+        src="/footer_images/discord.png"
+        alt=""
+        width={37} 
+        height={40}
+        className={``} />
+      </a>
+
+      <a href="https://x.com/fronteradevsrgv">
+        <Image
+        src="/footer_images/twitter.png"
+        alt=""
+        width={37} 
+        height={40}
+        className={``} />
+      </a>
+
+      <a href="https://www.facebook.com/people/Frontera-Hacks/pfbid05mq7GpLNvxvwoCtZH1V2VQY2tFPxwFEh6EXKvjJsvKWWq9jXAi7WYVU8V4CTkrPwl/">
+       <Image
+        src="/footer_images/facebook.png"
+        alt=""
+        width={37} 
+        height={40}
+        className={``} />
+      </a>
+
+      <a href= "https://www.instagram.com/fronterahacks/">
+       <Image
+        src="/footer_images/instagram.png"
+        alt=""
+        width={37} 
+        height={40}
+        className={``} />
+      </a>
+
+       <a href= "https://www.youtube.com/@fronteradevsutrgv3696 ">
+       <Image
+        src="/footer_images/youtube.png"
+        alt=""
+        width={37} 
+        height={40}
+        className={``} />
+        </a>
+      </div>
+
+      <div>
+        <p className={`${footer_font.className} mt-4 text-center`}>
+        © 2024 Frontera Hacks. Made with ♡ by the Frontera Devs team
+        </p>
+      </div>
+      <div>
+        <Link 
+        href= 'https://static.mlh.io/docs/mlh-code-of-conduct.pdf'
+        >
+        <p className={`${footer_font.className} mt-1 text-blue-400 underline text-center`}>
+        MLH Code of Conduct
+        </p>
+        </Link>
+        
+      </div>
+  
     </div>
   )
 }

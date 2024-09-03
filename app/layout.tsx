@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dm_sans.className} min-h-screen max-h-fit`}>
+      <body className={`${dm_sans.className} min-h-screen min-w-full max-h-fit`}>
         <Navbar/>
         {children}
       </body>

@@ -22,14 +22,16 @@
   3. Add accessible line-height
   4. Improve text rendering
 */
-body {
+/* body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background-image: url('../public/geometric_bg.svg');
   background-size: 400vh;
   background-repeat: no-repeat;
   background-position: center 11.875em;
-}
+} */
+
+
 /*
   5. Improve media defaults
 */
@@ -56,12 +58,5 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-@media (max-width:767px) {
-  body {
-    background-image: url('../public/geometric_bg.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 8em;
-    /* background-color: red; */
-  }
-}
+
+

@@ -99,10 +99,10 @@
 }
 
 @media (min-width:768px) {
-    .heroContainer {
+    /* .heroContainer {
         margin-left: 10%;
         margin-right: 10%;
-    }
+    } */
 
     .fronteraHacksLogo {
         font-size: 4rem;
