@@ -26,7 +26,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background-image: url('../public/geometric_bg.svg');
-  background-size: cover;
+  background-size: 400vh;
   background-repeat: no-repeat;
   background-position: center 11.875em;
 }

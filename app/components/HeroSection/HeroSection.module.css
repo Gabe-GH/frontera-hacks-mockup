@@ -1,7 +1,8 @@
 .fronteraHacksLogo {
-    font-size: 1.85rem;
-    line-height: 2.15rem;
+    font-size: 80px; /*1.85rem;*/
+    line-height: 122%; /*2.15rem;*/
 }
+
 
 .dateText {
     font-size: .85rem;
@@ -68,6 +69,10 @@
     color: transparent;
 }
 
+.venueFaqText{
+    color: rgba(204,105,234);
+}
+
 /* Fallback for browsers that do not support custom btn style */
 @supports not ((-webkit-mask: none) or (mask-type: alpha)) {
     .customBtnRadius::before {
@@ -109,4 +114,40 @@
     .btnText {
         font-size: 1.5rem;
     }
+}
+
+/*Specifically for the Pillars Section of the homepage*/
+
+.pillarsSection {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+.pillarsContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+
+}
+
+.pillar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.pillarImage{
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.pillarCaption{
+    margin-top: 1 rem;
+    font-size: 1rem;
 }
