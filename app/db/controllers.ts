@@ -75,3 +75,28 @@ export async function createHacker(hackerData: hackerFormData): Promise<void> {
     else throw new Error("Please properly fill out all fields");
   }
 }
+
+export async function findHacker(email: string): Promise<boolean> {
+  try {
+    const client = await clientPromise;
+
+    const db =
+      process.env.NODE_ENV === "production"
+        ? client.db("fronteraHacks24")
+        : client.db("test_fronteraHacks24");
+
+    const hackersCollection = db.collection("hackers");
+
+    const userExists = await hackersCollection.findOne({ email });
+
+    return userExists ? true : false;
+  } catch (e) {
+    const error = e as Error;
+
+    if (error.message === "User already exists") throw e;
+    else {
+      console.error(error);
+      throw new Error("Database error");
+    }
+  }
+}
