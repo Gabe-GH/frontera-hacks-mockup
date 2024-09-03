@@ -80,7 +80,7 @@ export const sizes = ["XS", "S", "M", "L", "XL", "2XL", "3XL"];
 
 export const studyLevels = [
   "Less than Secondary / High School",
-  "Seconday / High School",
+  "Secondary / High School",
   "Undergraduate University (2 year - community college or similar)",
   "Undergraduate University (3+ year)",
   "Graduate University (Masters, Professional, Doctoral, etc)",
