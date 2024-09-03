@@ -31,5 +31,5 @@ export default async function middleware(req: any, ev: any) {
 
 // Configure the matcher to apply middleware to all routes except home
 export const config = {
-  matcher: ["/register"], // Protect all routes except home route '/'
+  matcher: ["/register", "/me"], // Protect all routes except home route '/'
 };
