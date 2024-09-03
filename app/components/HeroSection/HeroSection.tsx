@@ -23,14 +23,16 @@ const sponsor_button_font = Hanken_Grotesk({
 
 export default function HeroSection() {
   return (
-    <hgroup className={`${styles.heroContainer} ml-10 mt-20`}>
-      <Headers />
-      <HookText />
-      <div
-        className={`flex mt-6 w-40 justify-between md:justify-between md:w-64`}
-      >
-        <RegisterBtn />
-        <DiscordBtn />
+    <div className={`${styles.heroContainer} mx-10 mt-20 h-screen`}>
+      <div className="min-h-screen -mb-50">
+        <Headers />
+        <HookText />
+        <div
+          className={`flex mt-6 w-40 justify-between md:justify-between md:w-64`}
+        >
+          <RegisterBtn />
+          <DiscordBtn />
+        </div>
       </div>
       <div>
         <AboutSection />
@@ -53,7 +55,7 @@ export default function HeroSection() {
       <div>
         <VenueSection />
       </div>
-    </hgroup>
+    </div>
   );
 }
 
@@ -226,13 +228,15 @@ const ScheduleSection = () => {
 
 const SponsorsSection = () => {
   return (
-    <div className={`mt-36`}>
+    <div className={`mt-36 mb-36`}>
       <h1
         className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
       >
         Sponsors
       </h1>
-      <p className={`font-light text-sm justify-self-center text-center`}>
+      <p
+        className={`font-light text-md justify-self-center text-center underline underline-offset-4`}
+      >
         Frontera Hacks is made possible by our wonderful sponsors.
       </p>
       <div className={`mt-12 flex justify-center gap-x-12`}>
@@ -240,22 +244,24 @@ const SponsorsSection = () => {
           <Image
             src="/sponsors/Heb.png"
             alt=""
-            width={152}
-            height={59}
+            width={200}
+            height={200}
             className={``}
           />
         </div>
-        <div>
+        <div className="mt-3">
           <Image
             src="/sponsors/Galaxy.png"
             alt=""
             width={200}
-            height={50}
+            height={200}
             className={``}
           />
         </div>
       </div>
-      <p className={`mt-20 font-light text-sm justify-self-center text-center`}>
+      <p
+        className={`mt-20 font-light text-sm justify-self-center text-center italic`}
+      >
         Want to help make this event a reality?
       </p>
 
@@ -264,7 +270,7 @@ const SponsorsSection = () => {
           className={`bg-white text-black border border-white rounded-full py-1 px-4 block text-center max-w-44 mx-auto`}
           href="mailto:fronteradevs@gmail.com"
         >
-          <p className={`${sponsor_button_font.className} text-xs`}>
+          <p className={`${sponsor_button_font.className} text-xl `}>
             BECOME A SPONSOR{" "}
           </p>
         </Link>
@@ -275,7 +281,7 @@ const SponsorsSection = () => {
 
 const TeamSection = () => {
   return (
-    <div>
+    <div className="md:hidden lg:block">
       <h1
         className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
       >
@@ -291,7 +297,7 @@ const TeamSection = () => {
       </p>
 
       <div
-        className={`grid ${honeyStyle.grid_temp} grid-rows-2 max-w-min ml-auto`}
+        className={`grid ${honeyStyle.grid_temp} grid-rows-2 max-w-min mx-auto mt-20 pl-20`}
       >
         {profiles.map((profile, idx) => {
           let gridColumnClass = "";
@@ -349,10 +355,11 @@ const TeamSection = () => {
               id="item"
             >
               <a href={profile.url} target="_blank" rel="noopener noreferrer">
-                <img
+                <Image
+                  width={160}
+                  height={170}
                   src={profile.folderPath}
                   alt={`Profile ${idx + 1}`}
-                  style={{ width: "160px", height: "170px" }}
                 />
               </a>
             </div>
@@ -364,8 +371,10 @@ const TeamSection = () => {
 };
 
 const FaqSection = () => {
+  const faqStyle = "font-black text-xl underline underline-offset-4 mb-1";
+
   return (
-    <div>
+    <div className="sm:pb-40 md:pb-0">
       <h1
         className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
       >
@@ -374,7 +383,7 @@ const FaqSection = () => {
 
       <div className={"mt-10 grid grid-cols-2 justify-center gap-x-12"}>
         <div className={`flex flex-col`}>
-          What is a hackathon?
+          <span className={faqStyle}>What is a hackathon?</span>
           <div className={`text-sm`}>
             A hackathon is a sprint-like event where developers collaborate to
             build projects that solve challenges. At Frontera Hacks, hackers can
@@ -384,7 +393,7 @@ const FaqSection = () => {
         </div>
 
         <div className={`flex flex-col`}>
-          What is the cost to participate?
+          <span className={faqStyle}>What is the cost to participate?</span>
           <div className={`text-sm`}>
             Nada, nothing, zilch. There is absolutely no cost for applying or
             participating in Frontera Hacks. We want to make this event as
@@ -394,7 +403,7 @@ const FaqSection = () => {
         </div>
 
         <div className={`mt-5 flex flex-col`}>
-          Who is this event for?
+          <span className={faqStyle}>Who is this event for?</span>
           <div className={`text-sm`}>
             Students from all backgrounds are welcome at Frontera Hacks. No
             extensive knowledge of programming is necessary.
@@ -402,7 +411,7 @@ const FaqSection = () => {
         </div>
 
         <div className={` mt-5 flex flex-col`}>
-          What if I don’t know how to code?
+          <span className={faqStyle}>What if I don’t know how to code?</span>
           <div className={`text-sm`}>
             No experience is needed — whether you&#39;re a coder, an artist, a
             designer, or a writer, you&#39;ll get a chance to work with various
@@ -412,7 +421,7 @@ const FaqSection = () => {
         </div>
 
         <div className={`flex flex-col`}>
-          Do I need a team to participate?
+          <span className={faqStyle}>Do I need a team to participate?</span>
           <div className={`text-sm`}>
             While teams are not required in order to participate, it’s a great
             way to meet new people and create something together. Teams may have
@@ -422,7 +431,9 @@ const FaqSection = () => {
         </div>
 
         <div className={`mt-5 flex flex-col`}>
-          What if I need special accomodations?
+          <span className={faqStyle}>
+            What if I need special accomodations?
+          </span>
           <div className={`text-sm`}>
             Frontera Hacks prioritizes accessibility and accomodations that make
             our event welcoming for everyone. Please list any special
@@ -437,7 +448,7 @@ const FaqSection = () => {
 
 const VenueSection = () => {
   return (
-    <div>
+    <div className="pb-40 md:hidden lg:block">
       <h1
         className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
       >
@@ -450,10 +461,10 @@ const VenueSection = () => {
           alt=""
           width={1157}
           height={158}
-          className={``}
+          className={`block`}
         />
         <h1
-          className={`absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold whitespace-nowrap`}
+          className={`absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold whitespace-nowrap 2xl:left-1/3`}
         >
           UTRGV Edinburg Engineering Building (EENGR)
         </h1>
