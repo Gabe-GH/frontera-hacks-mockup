@@ -74,8 +74,6 @@ export default function Page() {
         updatedStudentStatus = false;
       }
 
-      console.log(newFormData);
-
       const allCheckboxStatus =
         newFormData.checkbox1 && newFormData.checkbox2 && newFormData.checkbox3;
 
