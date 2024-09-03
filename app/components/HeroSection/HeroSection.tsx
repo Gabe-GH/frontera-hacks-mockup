@@ -19,6 +19,8 @@ const frontera_logo_font = Bruno_Ace({
 
 const sponsor_button_font = Hanken_Grotesk({
   weight: "400",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export default function HeroSection() {
