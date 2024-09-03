@@ -1,8 +1,29 @@
 .fronteraHacksLogo {
-    font-size: 80px; /*1.85rem;*/
-    line-height: 122%; /*2.15rem;*/
+    font-size: 80px;
+    /*1.85rem;*/
+    line-height: 122%;
+    /*2.15rem;*/
 }
 
+@media (max-width:582) {
+    .fronteraHacksLogo {
+        font-size: 50px;
+        text-wrap: pretty;
+        /*1.85rem;*/
+        line-height: 122%;
+        /*2.15rem;*/
+    }
+}
+
+@media (max-width:401) {
+    .fronteraHacksLogo {
+        font-size: 30px;
+        text-wrap: pretty;
+        /*1.85rem;*/
+        line-height: 122%;
+        /*2.15rem;*/
+    }
+}
 
 .dateText {
     font-size: .85rem;
@@ -69,8 +90,8 @@
     color: transparent;
 }
 
-.venueFaqText{
-    color: rgba(204,105,234);
+.venueFaqText {
+    color: rgba(204, 105, 234);
 }
 
 /* Fallback for browsers that do not support custom btn style */
@@ -121,17 +142,17 @@
 .pillarsSection {
     text-align: center;
     padding: 2rem 0;
-  }
-  
-  .sectionTitle {
+}
+
+.sectionTitle {
     font-size: 2rem;
     margin-bottom: 1rem;
-  }
+}
 
-.pillarsContainer{
+.pillarsContainer {
     display: flex;
     justify-content: space-around;
-    align-items:center;
+    align-items: center;
 
 }
 
@@ -139,15 +160,15 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+
 }
 
-.pillarImage{
+.pillarImage {
     border-radius: 50%;
     object-fit: cover;
 }
 
-.pillarCaption{
+.pillarCaption {
     margin-top: 1 rem;
     font-size: 1rem;
 }
