@@ -12,7 +12,6 @@ import { useUser } from "@auth0/nextjs-auth0/client";
 // rippleui's drawer component, inner components will be refactored later
 // ***
 export default function MobileNavbar() {
-
   return (
     <nav className="navbar navbar-no-boxShadow bg-transparent">
       <div className="navbar-end">
