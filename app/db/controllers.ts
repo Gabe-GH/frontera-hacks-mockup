@@ -28,6 +28,8 @@ interface hackerDatabaseType extends hackerFormData {
 }
 
 export async function createHacker(hackerData: hackerFormData): Promise<void> {
+  let exists = false;
+
   try {
     // make sure email is unique
     // if it is not return error
@@ -51,6 +53,13 @@ export async function createHacker(hackerData: hackerFormData): Promise<void> {
 
     const hackersCollection = db.collection("hackers");
 
+    const userExists = await hackersCollection.findOne({ email: hacker.email });
+
+    if (userExists) {
+      exists = true;
+      throw new Error("User already exists");
+    }
+
     const qrcode = await generateQRCode(hacker.email);
 
     const hackerEntry: hackerDatabaseType = {
@@ -60,7 +69,9 @@ export async function createHacker(hackerData: hackerFormData): Promise<void> {
 
     await hackersCollection.insertOne(hackerEntry);
   } catch (e) {
-    console.error(e);
-    throw new Error("Failed to create hacker");
+    const error = e as Error;
+
+    if (error.message === "User already exists") throw e;
+    else throw new Error("Please properly fill out all fields");
   }
 }

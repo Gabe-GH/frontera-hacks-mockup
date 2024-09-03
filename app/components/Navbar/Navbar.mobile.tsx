@@ -1,13 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./Navbar.mobile.module.css";
+import ProfileServer from "@/app/helpers/isLoggedIn";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 // ***
-// can't be refactored because this whole component relies on rippleui's drawer component
-// using tailwind's properties
+// component as a whole cant be refactored currently as it relies on
+// rippleui's drawer component, inner components will be refactored later
 // ***
 export default function MobileNavbar() {
+
   return (
     <nav className="navbar navbar-no-boxShadow bg-transparent">
       <div className="navbar-end">
@@ -54,29 +59,42 @@ export default function MobileNavbar() {
             {/* menu items inside the drawer */}
             <div className="w-screen font-light">
               <hr className={`${styles.borderDecoration} my-4`} />
+
+              {/* About Link */}
               <h2 className={`${styles.drawerLink} text-xl uppercase mr-8`}>
                 <Link href="/#about">about</Link>
               </h2>
+
+              {/* Schedule Link */}
               <h2
                 className={`${styles.drawerLink} text-xl uppercase mr-8 mt-4`}
               >
                 <Link href="/#schedule">schedule</Link>
               </h2>
               <hr className={`${styles.borderDecoration} my-4`} />
+
+              {/* Challenge Link */}
               <h2 className={`${styles.drawerLink} text-xl uppercase mr-8`}>
                 <Link href="/#challenges">challenges</Link>
               </h2>
+
+              {/* Prizes Link */}
               <h2
                 className={`${styles.drawerLink} text-xl uppercase mr-8 mt-4`}
               >
                 <Link href="/#prizes">prizes</Link>
               </h2>
+
+              {/* FAQ Link */}
               <h2
                 className={`${styles.drawerLink} text-xl uppercase mr-8 mt-4`}
               >
                 <Link href="/#faq">faq</Link>
               </h2>
-              <hr className={`${styles.borderDecoration} mb-14 my-4`} />
+              <hr className={`${styles.borderDecoration} my-4`} />
+
+              {/* Login Link */}
+              <LoginBtn />
             </div>
           </div>
         </div>
@@ -84,3 +102,27 @@ export default function MobileNavbar() {
     </nav>
   );
 }
+
+const LoginBtn = () => {
+  const { user } = useUser();
+
+  return (
+    <>
+      {!user && (
+        <>
+          <h2 className={`${styles.drawerLink} text-xl uppercase mr-8 mb-4`}>
+            <a href={`/api/auth/login?prompt=login`}>Log In</a>{" "}
+          </h2>
+        </>
+      )}
+
+      {user && (
+        <>
+          <h2 className={`${styles.drawerLink} text-xl uppercase mr-8 mb-4`}>
+            <a href={`/api/auth/logout`}>Log Out</a>{" "}
+          </h2>
+        </>
+      )}
+    </>
+  );
+};

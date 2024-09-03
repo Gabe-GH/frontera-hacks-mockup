@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Bruno_Ace } from "next/font/google";
 
 import DiscordBtn from "../ui/DiscordBtn";
+import { RegisterBtn } from "./Registerbtn";
 
 import styles from "./HeroSection.module.css";
 
@@ -11,7 +12,7 @@ const frontera_logo_font = Bruno_Ace({
   display: "swap",
 });
 
-export default function HeroSection() {
+export default async function HeroSection() {
   return (
     <hgroup className={`${styles.heroContainer} ml-10 mt-20`}>
       <Headers />
@@ -65,16 +66,5 @@ const HookText = () => {
         </a>
       </span>
     </p>
-  );
-};
-
-const RegisterBtn = () => {
-  return (
-    <Link
-      className={`${styles.customBtnRadius} btn p-4 md:px-6 md:py-8`}
-      href={"/login"}
-    >
-      <p className={`${styles.btnText} uppercase`}>Register</p>
-    </Link>
   );
 };

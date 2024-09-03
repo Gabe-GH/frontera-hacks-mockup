@@ -20,25 +20,25 @@ export const genders = [
 ];
 
 export const majors = [
-  "Computer science, computer engineering, or software engineering ",
-  "Another engineering discipline (such as civil, electrical, mechanical, etc.) ",
-  "Information systems, information technology, or system administration ",
-  "A natural science (such as biology, chemistry, physics, etc.) ",
-  "Mathematics or statistics ",
-  "Web development or web design ",
-  "Business discipline (such as accounting, finance, marketing, etc.) ",
-  "Humanities discipline (such as literature, history, philosophy, etc.) ",
-  "Social science (such as anthropology, psychology, political science, etc.) ",
-  "Fine arts or performing arts (such as graphic design, music, studio art, etc.) ",
-  "Health science (such as nursing, pharmacy, radiology, etc.) ",
-  "Undecided / No Declared Major ",
-  "My school does not offer majors / primary areas of study ",
-  "Other (please specify) ",
+  "Computer science, computer engineering, or software engineering",
+  "Another engineering discipline (such as civil, electrical, mechanical, etc.)",
+  "Information systems, information technology, or system administration",
+  "A natural science (such as biology, chemistry, physics, etc.)",
+  "Mathematics or statistics",
+  "Web development or web design",
+  "Business discipline (such as accounting, finance, marketing, etc.)",
+  "Humanities discipline (such as literature, history, philosophy, etc.)",
+  "Social science (such as anthropology, psychology, political science, etc.)",
+  "Fine arts or performing arts (such as graphic design, music, studio art, etc.)",
+  "Health science (such as nursing, pharmacy, radiology, etc.)",
+  "Undecided / No Declared Major",
+  "My school does not offer majors / primary areas of study",
+  "Other (please specify)",
   "Prefer not to answer",
 ];
 
 export const orientations = [
-  "Heterosexual or Straight ",
+  "Heterosexual or Straight",
   "Gay or Lesbian",
   "Bisexual",
   "Different Identity (please specify)",
@@ -80,7 +80,7 @@ export const sizes = ["XS", "S", "M", "L", "XL", "2XL", "3XL"];
 
 export const studyLevels = [
   "Less than Secondary / High School",
-  "Seconday / High School",
+  "Secondary / High School",
   "Undergraduate University (2 year - community college or similar)",
   "Undergraduate University (3+ year)",
   "Graduate University (Masters, Professional, Doctoral, etc)",
