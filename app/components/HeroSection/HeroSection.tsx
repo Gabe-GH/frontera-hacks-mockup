@@ -23,14 +23,16 @@ const sponsor_button_font = Hanken_Grotesk({
 
 export default function HeroSection() {
   return (
-    <hgroup className={`${styles.heroContainer} ml-10 mt-20`}>
-      <Headers />
-      <HookText />
-      <div
-        className={`flex mt-6 w-40 justify-between md:justify-between md:w-64`}
-      >
-        <RegisterBtn />
-        <DiscordBtn />
+    <div className={`${styles.heroContainer} ml-10 mt-20 h-screen`}>
+      <div className="min-h-screen -mb-50">
+        <Headers />
+        <HookText />
+        <div
+          className={`flex mt-6 w-40 justify-between md:justify-between md:w-64`}
+        >
+          <RegisterBtn />
+          <DiscordBtn />
+        </div>
       </div>
       <div>
         <AboutSection />
@@ -53,7 +55,7 @@ export default function HeroSection() {
       <div>
         <VenueSection />
       </div>
-    </hgroup>
+    </div>
   );
 }
 
@@ -291,7 +293,7 @@ const TeamSection = () => {
       </p>
 
       <div
-        className={`grid ${honeyStyle.grid_temp} grid-rows-2 max-w-min ml-auto`}
+        className={`grid ${honeyStyle.grid_temp} grid-rows-2 max-w-min mx-auto mt-20 pl-20`}
       >
         {profiles.map((profile, idx) => {
           let gridColumnClass = "";
@@ -349,10 +351,11 @@ const TeamSection = () => {
               id="item"
             >
               <a href={profile.url} target="_blank" rel="noopener noreferrer">
-                <img
+                <Image
+                  width={160}
+                  height={170}
                   src={profile.folderPath}
                   alt={`Profile ${idx + 1}`}
-                  style={{ width: "160px", height: "170px" }}
                 />
               </a>
             </div>
