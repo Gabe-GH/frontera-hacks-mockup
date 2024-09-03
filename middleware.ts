@@ -14,7 +14,7 @@ export default async function middleware(req: any, ev: any) {
   const res = await withMiddlewareAuthRequired()(req, ev);
 
   // Completely disallow access to '/admin' if user doesn't have the right permissions
-  if (pathname === "/admin") {
+  if (pathname === "/admin" || pathname === "/example") {
     // Get the user's session data
     const session = await getSession();
 
