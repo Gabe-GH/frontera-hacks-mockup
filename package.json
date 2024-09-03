@@ -7,7 +7,7 @@
     "dev": "dotenvx run -- next dev --turbo",
     "build": "dotenvx run -- next build",
     "lint": "next lint",
-    "start": "dotenvx run -f .env.production -- next start",
+    "start": "dotenvx run -- next start",
     "script": "npx tsx"
   },
   "dependencies": {
