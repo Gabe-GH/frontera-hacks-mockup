@@ -3,6 +3,7 @@ import type { Config } from "tailwindcss";
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -25,14 +26,6 @@ module.exports = {
   /** @type {import('rippleui').Config} */
   rippleui: {
     themes: [
-      {
-        themeName: "light",
-        colorScheme: "light",
-        colors: {
-          primary: "#573242",
-          backgroundPrimary: "#000000",
-        },
-      },
       {
         themeName: "dark",
         colorScheme: "dark",
