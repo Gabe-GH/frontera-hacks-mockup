@@ -40,7 +40,6 @@ export default function HeroSection() {
        className={`flex mt-6 w-40 justify-between md:justify-between md:w-64`}
      >
        <RegisterBtn />
-       <DiscordBtn />
      </div>
      <AboutSection />
      <PillarsSection />
@@ -63,21 +62,23 @@ export default function HeroSection() {
 
 const Headers = () => {
   return (
-    <div className="min-w-full">
+    <div className="container mx-auto max-md:pl-12">
+      <div className="text-left">
       <time
         dateTime="2024-10-19"
-        className={`${styles.dateText} text-date-grey font-bold`}
+        className={`${styles.dateText} text-date-grey font-bold block`}
       >
         October 19-20, 2024
       </time>
       <h1
-        className={`${styles.fronteraHacksLogo} ${frontera_logo_font.className} mr-10 my-4 md:my-10`}
+        className={`mx-w-md ${styles.fronteraHacksLogo} ${frontera_logo_font.className} mr-10 my-4 md:my-10 md:max-w-2xl ${styles.fronteraHacksLogoSm} ${frontera_logo_font.className}`}
       >
         frontera hacks
       </h1>
-      <h2 className={`${styles.hookText} mr-10 font-semibold mb-10`}>
+      <h2 className={`${styles.hookText} mr-10 font-semibold mb-10 md:my-10`}>
         Accelerate innovation in the RGV
       </h2>
+    </div>
     </div>
   );
 };
@@ -85,13 +86,13 @@ const Headers = () => {
 const HookText = () => {
   return (
     <p
-      className={`${styles.descriptionText} font-light mr-16 sm:mr-44 md:mr-12 md:mb-3`}
+      className={`lg:${styles.descriptionText} font-light mr-16 sm:mr-44 md:mr-12 md:mb-3 max-sm:pl-12 max-md:text-xs`}
     >
       Collaborate with peers to learn new skills, unleash your creativity and
       build solutions for real-world problems at the 2nd hackathon hosted by{" "}
       <span>
         <a
-          className={`${styles.fronteraLink} link link-underline hover:text-blue-300`}
+          className={`lg:${styles.fronteraLink} link link-underline hover:text-blue-300 max-md:text-xs`}
           href={`https://fronteradevs.com`}
           target="_blank"
           rel="noopener noreferrer"
@@ -106,14 +107,14 @@ const HookText = () => {
 const AboutSection = () => {
   return (
     <div className="w-full">
-    <div className={`mt-36 md:mt-20`}>
+    <div className={`mt-32 max-md:mt-10 max-md:p-12`}>
     <h1 
-    className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+    className={`${frontera_logo_font.className} max-md:text-2xl mr-10 my-4 md:my-10 text-5xl`}
     > 
     About 
     </h1>
     <p  
-    className={`${styles.descriptionText} font-light mx-auto md:mx-0 md:mr-12 md:mb-6 w-full`}
+    className={`lg:${styles.descriptionText} font-light mx-auto md:mx-0 md:mr-12 md:mb-6 w-full max-md:text-xs`}
     >
       Frontera Hacks is a 24-hour hackathon that aims to foster a community of developers driven to innovate. At Frontera Hacks, we aim to provide an experience for developers of all skill levels to adopt skills taught outside of the classroom, collaborate with like-minded teams, and design projects with the potential to accelerate innovation in the Rio Grande Valley.
     </p>
@@ -125,15 +126,16 @@ const AboutSection = () => {
 const PillarsSection = () => {
   return (
     <>
-      <div className={`${styles.pillarsSection} mt-12 md:mt-20`}></div>
+      <div className={`${styles.pillarsSection} max-md:mt-1 mt-12 `}></div>
       <h1
-        className={` ${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+        className={` ${frontera_logo_font.className} max-md:text-2xl max-md:pl-12 mr-10  md:my-10 text-5xl`}
       >
         Pillars
       </h1>
 
-      <div className={"mt-24 flex w-full justify-center gap-x-12"}>
-        <div className={`flex flex-col items-center`}>
+      <div className={"mt-24 max-md:mt-16 flex w-full justify-center gap-x-12 max-md:flex-col"}>
+        
+        <div className={`flex flex-col items-center md:mt-6`}>
           <Image
             src="/connect-pillar-image.png"
             alt="Connect"
@@ -141,16 +143,16 @@ const PillarsSection = () => {
             height={150}
             className={styles.pillarImage}
           />
-          <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>
+          <div className={`${frontera_logo_font.className} mt-1 text-3xl max-md:text-lg`}>
             Connect
           </div>
-          <div className={`mt-5 font-light lg:w-4/5`}>
+          <div className={`mt-5 font-light  max-md:mt-1 max-md:text-xs max-md:w-1/2 lg:w-4/5 xl:w-full`}>
             Meet developers interested in shaping the future of innovation at
             Frontera Hacks
           </div>
         </div>
 
-        <div className={`flex flex-col items-center`}>
+        <div className={`flex flex-col items-center max-md: mt-6`}>
           <Image
             src="/grow-pillar-image.png"
             alt="Grow"
@@ -158,16 +160,16 @@ const PillarsSection = () => {
             height={150}
             className={styles.pillarImage}
           />
-          <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>
+          <div className={`${frontera_logo_font.className} mt-1 text-3xl max-md:text-lg`}>
             Grow
           </div>
-          <div className={`mt-5 font-light lg:w-4/5`}>
+          <div className={`mt-5 font-light  max-md:mt-1  max-md:text-xs max-md:w-1/2 lg:w-4/5 xl:w-full`}>
             Advance your technical and interpersonal skills through our hands-on
             workshops
           </div>
         </div>
 
-        <div className={`flex flex-col items-center`}>
+        <div className={`flex flex-col items-center max-md: mt-6`}>
           <Image
             src="/build-pillar-image.png"
             alt="Build"
@@ -175,10 +177,10 @@ const PillarsSection = () => {
             height={150}
             className={styles.pillarImage}
           />
-          <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>
+          <div className={`${frontera_logo_font.className} mt-1 text-3xl max-md:text-lg`}>
             Build
           </div>
-          <div className={`mt-5 font-light lg:w-4/5`}>
+          <div className={`mt-5 font-light  max-md:mt-1 max-md:text-xs max-md:w-1/2 lg:w-4/5 xl:w-full`}>
             Develop solutions with the potential to aid and impact our community
           </div>
         </div>
@@ -189,25 +191,25 @@ const PillarsSection = () => {
 
 const ScheduleSection = () => {
   return (
-    <div className={`mt-36 md:mt-20 w-full`}>
+    <div className={`mt-36 md:mt-14 w-full max-md:pl-12`}>
       <h1
-        className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+        className={`${frontera_logo_font.className} max-md:text-2xl mr-10 my-4 md:my-10 text-5xl`}
       >
         Schedule
       </h1>
 
 <div className= {` mt-12 w-full flex max-md:flex-col gap-x-16`}>
 
-{schedule.map((day,idx)=>(<div key={idx} className= {`w-3/4`}> 
-  <span className={`${styles.subtitleText} text-xl`}>Day {day.dayNumber} - {day.date}</span>
+{schedule.map((day,idx)=>(<div key={idx} className= {`w-3/4 max-md:w-full ${idx === 1 ? 'max-md:mt-10' : ''}`}> 
+  <span className={`${styles.subtitleText} text-xl max-md:text-lg`}>Day {day.dayNumber} - {day.date}</span>
  {
   day.events.map((evnt,idx)=> ( <div key={idx} className= {`flex w-full whitespace-nowrap mt-3 justify-between`}>
 
- <div className={`w-40 ${idx === 0 ? 'text-gray-400' : ''}`}>
+ <div className={`w-40 ${idx === 0 ? 'text-date-grey' : ''} max-md:text-xs`}>
   {evnt.time}
  </div>
 
- <div className= {`flex w-full flex-col items-start justify-start ${idx === 0 ? 'text-gray-400' : ''}`}>
+ <div className= {`flex w-full flex-col items-start justify-start ${idx === 0 ? 'text-date-grey' : ''} max-md:text-xs`}>
   {evnt.eventName}
  </div>
     </div>))
@@ -227,16 +229,15 @@ const SponsorsSection= () => {
   return(
     <div className= {`mt-36 w-full`}>
       <h1 
-    className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+    className={`${frontera_logo_font.className} max-md:text-2xl max-md:pl-12 mr-10 my-4 md:my-10 text-5xl`}
     > 
     Sponsors 
     </h1>
-    <p className={`font-light text-sm justify-self-center text-center`}
+    <p className={`font-light text-sm justify-self-center text-center max-sm:text-xs max-md:mt-10`}
     >
       Frontera Hacks is made possible by our wonderful sponsors.
     </p>
-    <div className={`mt-12 flex justify-center gap-x-12`}>
-      <div>
+    <div className={`mt-12 flex justify-center gap-x-12 max-md:text-xs max-md:flex-col items-center gap-y-10`}>
         <Image
         src="/sponsors/Heb.png"
         alt=""
@@ -244,8 +245,6 @@ const SponsorsSection= () => {
         height={59}
         className={``}
         />
-      </div>
-      <div>
         <Image
          src="/sponsors/Galaxy.png"
          alt=""
@@ -253,21 +252,27 @@ const SponsorsSection= () => {
          height={50}
          className={``}
         />
-      </div>
-
+        <Image
+        src="/sponsors/StandOutStickers.png"
+        alt=""
+        width={122}
+        height={60}
+        className={``}
+        />
     </div>
-    <p className={`mt-20 font-light text-sm justify-self-center text-center`}
+    
+    <p className={`md:mt-20 font-light text-sm justify-self-center text-center max-sm:mt-10 max-sm:text-xs`}
     >
-      Want to help make this event a reality?
-       </p>
+      Want to help make this event a reality? 
+       </p> 
 
       <div className={`mt-4`}>
         <Link
-          className={`bg-white text-black border border-white rounded-full py-1 px-4 block text-center max-w-44 mx-auto`}
+          className={`bg-white text-black border border-white rounded-full py-1 px-4 block text-center max-w-40 mx-auto`}
           href="mailto:fronteradevs@gmail.com"
         >
-          <p className={`${sponsor_button_font.className} text-xl `}>
-            BECOME A SPONSOR{" "}
+          <p className={`${sponsor_button_font.className} text-xs bold`}>
+            BECOME A SPONSOR
           </p>
         </Link>
       </div>
@@ -277,7 +282,7 @@ const SponsorsSection= () => {
 
 const TeamSection = () => {
   return (
-    <div className="md:hidden lg:block">
+    <div className="max-sm:hidden md:hidden lg:block mt-36">
       <h1
         className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
       >
@@ -293,7 +298,7 @@ const TeamSection = () => {
       </p>
 
       <div
-        className={`grid ${honeyStyle.grid_temp} grid-rows-2 max-w-min mx-auto mt-20 pl-20`}
+        className={`grid ${honeyStyle.grid_temp} lg:grid-rows-2  max-w-min mx-auto mt-20 xl:pl-7`}
       >
         {profiles.map((profile, idx) => {
           let gridColumnClass = "";
@@ -370,17 +375,17 @@ const FaqSection = () => {
   const faqStyle = "font-black text-xl underline underline-offset-4 mb-1";
 
   return (
-    <div className="sm:pb-40 md:pb-0">
+    <div className="mt-36 md:mt-14 sm:pb-40 md:pb-0">
       <h1
-        className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+        className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl max-md:text-2xl max-md:pl-12`}
       >
         Fequently Asked Questions
       </h1>
 
-      <div className={"mt-10 grid grid-cols-2 justify-center gap-x-12"}>
-        <div className={`flex flex-col`}>
-          <span className={faqStyle}>What is a hackathon?</span>
-          <div className={`text-sm`}>
+      <div className={"mt-10 grid grid-cols-2 justify-center gap-x-12 max-md:grid-cols-1 max-md:w-3/4 "}>
+        <div className={`mt-5 flex flex-col max-md:pl-20`}>
+          <span className={`${styles.subtitleText} font-bold text-xl max-md:text-lg`}>What is a hackathon?</span>
+          <div className={`text-sm max-md:text-xs`}>
             A hackathon is a sprint-like event where developers collaborate to
             build projects that solve challenges. At Frontera Hacks, hackers can
             look forward to educational workshops, learning from skilled
@@ -388,9 +393,9 @@ const FaqSection = () => {
           </div>
         </div>
 
-        <div className={`flex flex-col`}>
-          <span className={faqStyle}>What is the cost to participate?</span>
-          <div className={`text-sm`}>
+        <div className={`flex flex-col max-md:pl-20 max-md: mt-5`}>
+          <span className={`${styles.subtitleText} font-bold text-xl max-md:text-lg`}>What is the cost to participate?</span>
+          <div className={`text-sm max-md:text-xs`}>
             Nada, nothing, zilch. There is absolutely no cost for applying or
             participating in Frontera Hacks. We want to make this event as
             accessible as possible to all those interested so make sure you
@@ -398,17 +403,17 @@ const FaqSection = () => {
           </div>
         </div>
 
-        <div className={`mt-5 flex flex-col`}>
-          <span className={faqStyle}>Who is this event for?</span>
-          <div className={`text-sm`}>
+        <div className={`mt-5 md:mt-8 flex flex-col max-md:pl-20`}>
+          <span className={`${styles.subtitleText} font-bold text-xl max-md:text-lg`}>Who is this event for?</span>
+          <div className={`text-sm max-md:text-xs`}>
             Students from all backgrounds are welcome at Frontera Hacks. No
             extensive knowledge of programming is necessary.
           </div>
         </div>
 
-        <div className={` mt-5 flex flex-col`}>
-          <span className={faqStyle}>What if I don’t know how to code?</span>
-          <div className={`text-sm`}>
+        <div className={` mt-5 flex flex-col max-md:pl-20`}>
+          <span className={`${styles.subtitleText} font-bold text-xl max-md:text-lg`}>What if I don’t know how to code?</span>
+          <div className={`text-sm max-md:text-xs`}>
             No experience is needed — whether you&#39;re a coder, an artist, a
             designer, or a writer, you&#39;ll get a chance to work with various
             mentors, attend workshops, interact with companies, and learn
@@ -416,9 +421,9 @@ const FaqSection = () => {
           </div>
         </div>
 
-        <div className={`flex flex-col`}>
-          <span className={faqStyle}>Do I need a team to participate?</span>
-          <div className={`text-sm`}>
+        <div className={`flex flex-col max-md:pl-20 max-md: mt-5`}>
+          <span className={`${styles.subtitleText} font-bold text-xl max-md:text-lg`}>Do I need a team to participate?</span>
+          <div className={`text-sm max-md:text-xs`}>
             While teams are not required in order to participate, it’s a great
             way to meet new people and create something together. Teams may have
             up to 4 members, and you will have a chance to meet other hackers at
@@ -426,11 +431,11 @@ const FaqSection = () => {
           </div>
         </div>
 
-        <div className={`mt-5 flex flex-col`}>
-          <span className={faqStyle}>
+        <div className={`mt-5 flex flex-col max-md:pl-20`}>
+          <span className={`${styles.subtitleText} font-bold text-xl max-md:text-lg`}>
             What if I need special accomodations?
           </span>
-          <div className={`text-sm`}>
+          <div className={`text-sm max-md:text-xs`}>
             Frontera Hacks prioritizes accessibility and accomodations that make
             our event welcoming for everyone. Please list any special
             accommodations in your admissions, or contact us with any other
@@ -444,29 +449,27 @@ const FaqSection = () => {
 
 const VenueSection = () => {
   return (
-    <div className="pb-40 md:hidden lg:block">
+    <div className="lg:mt-44 pb-40 max-md:hidden md:hidden lg:block ">
       <h1
-        className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+        className={`${frontera_logo_font.className} mt-10 mr-10 my-4 md:my-10 text-5xl max-md:text-2xl max-md:pl-12`}
       >
         Venue
       </h1>
 
       <div className={`relative`}>
         <Image
-        src= "/venue_location_border.png"
+        src= "/venue-location.png"
         alt=""
         width={1157} 
         height={158}
         className={`relative`}
         />
-        <h1 className= {`${styles.subtitleText} absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white md:text-4xl max-md:tracking-wide font-bold whitespace-nowrap`}>
-        UTRGV Edinburg Engineering Building (EENGR)
-        </h1>  
+       
 
       </div>
 
 <div className={``}>
-      <div className={`top-[-30px] max-lg:h-80 left-[-5px] relative`}>
+      <div className={`top-[-30px] max-lg:h-96 left-[-5px] relative`}>
           <Image 
           src= "/map-cropped.png"
           alt="Map"
@@ -485,13 +488,13 @@ const VenueSection = () => {
         </div>
 
           <div className={`lg:ml-96 flex flex-col justify-center`}>
-          <h1 className={`${frontera_logo_font.className}  ${styles.venueFaqText} max-lg:mt-5  mt-1 text-2xl lg:ml-80`}> Where do I park?</h1>
-          <p className={`mt-1 lg:ml-80 max-w-60`}>
+          <h1 className={`${frontera_logo_font.className}  ${styles.venueFaqText} text-2xl lg:ml-56 lg:text-xl`}> Where do I park?</h1>
+          <p className={`mt-1 lg:ml-56 max-w-96 lg:text-sm`}>
           Lots E16 or E21 are closest to the Engineering 
           building. These are along 4th Ave.
              </p>
-          <h1 className={`${frontera_logo_font.className} ${styles.venueFaqText} lg:mt-16 mt-5 text-2xl lg:ml-72 `}>Extra Information</h1>
-          <p className={`mt-1 lg:ml-64 max-w-80`}>
+          <h1 className={`${frontera_logo_font.className} ${styles.venueFaqText} text-2xl lg:ml-48 lg:mt-20 xl:ml-52 xl:mt-20 lg:text-xl`}>Extra Information</h1>
+          <p className={`mt-1 lg:ml-40 xl:ml-40 max-w-80 lg:text-sm`}>
           Enter through the door closest to the science building. Check-in will be in the lobby. 
           The building has ample space and internet connectivity. 
           Here, you will work with a team to bring your ideas to life! Happy hacking!
@@ -508,14 +511,14 @@ const VenueSection = () => {
 const Footer= () => {
   return(
     <div>
-    <div className={`${frontera_logo_font.className} mt-40 text-center text-4xl`}>
+    <div className={`${frontera_logo_font.className} mt-28 text-center text-4xl max-md:text-2xl`}>
       <h1>
         frontera hacks
       </h1>
       
 
     </div>
-    <div className={`mt-5 flex flex-row justify-center gap-x-10`}>
+    <div className={`mt-5 flex flex-row justify-center md:gap-x-10 max-sm:gap-x-6`}>
 
       <a href="https://discord.gg/XfjsWxPgBj">
         <Image
@@ -564,7 +567,7 @@ const Footer= () => {
       </div>
 
       <div>
-        <p className={`${footer_font.className} mt-4 text-center`}>
+        <p className={`${footer_font.className} mt-4 text-center max-md:text-xs`}>
         © 2024 Frontera Hacks. Made with ♡ by the Frontera Devs team
         </p>
       </div>
@@ -572,7 +575,7 @@ const Footer= () => {
         <Link 
         href= 'https://static.mlh.io/docs/mlh-code-of-conduct.pdf'
         >
-        <p className={`${footer_font.className} mt-1 text-blue-400 underline text-center`}>
+        <p className={`${footer_font.className} mt-1 text-blue-400 underline text-center max-md:text-xs`}>
         MLH Code of Conduct
         </p>
         </Link>

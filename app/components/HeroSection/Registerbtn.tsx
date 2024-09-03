@@ -12,11 +12,13 @@ export const RegisterBtn = () => {
   const redirectLink = user ? "/register" : "/api/auth/signup";
 
   return (
+    <div className="max-sm:pl-12">
     <Link
       className={`${styles.customBtnRadius} btn p-4 md:px-6 md:py-8`}
       href={redirectLink}
     >
       <p className={`${styles.btnText} uppercase`}>Register</p>
     </Link>
+    </div>
   );
 };

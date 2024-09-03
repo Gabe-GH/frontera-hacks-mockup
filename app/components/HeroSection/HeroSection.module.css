@@ -3,6 +3,10 @@
     line-height: 122%; /*2.15rem;*/
 }
 
+.fronteraHacksLogoSm{
+    font-size: 30px;
+    line-height: 122%;
+}
 
 .dateText {
     font-size: .85rem;
