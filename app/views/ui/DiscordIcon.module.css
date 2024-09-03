@@ -1,0 +1,21 @@
+.customBtnRadius {
+    border-radius: 90rem;
+}
+
+.customBtnRadius:hover {
+    background: linear-gradient(90deg, rgba(139, 199, 255, 1) 0%, rgba(157, 111, 255, 1) 50%, rgba(255, 72, 215, 1) 100%) border-box;
+}
+
+.discordIcon {
+    width: 2rem;
+}
+
+@media (min-width:768px) {
+    .discordIcon {
+        width: 3rem;
+    }
+
+    .btnText {
+        font-size: 1.5rem;
+    }
+}

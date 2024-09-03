@@ -1,0 +1,35 @@
+.ageInputField {
+    -webkit-appearance: none;
+    /* Remove arrows in WebKit browsers */
+    -moz-appearance: textfield;
+    /* Remove arrows in Firefox */
+    appearance: none;
+    /* Remove arrows in other browsers */
+}
+
+.ageInputField::-webkit-inner-spin-button,
+.ageInputField::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    /* Remove the arrows */
+    margin: 0;
+    /* Remove the margin */
+}
+
+.iconArrows {
+    cursor: pointer;
+}
+
+.errorMessage {
+    color: #f31260;
+
+    text-shadow: 0px 0px .15rem #f31260, 0px 0px 10px #000;
+
+}
+
+.dropdownContainer {
+    width: 100%
+}
+
+.dropdownArrowClickThrough {
+    pointer-events: none;
+}
