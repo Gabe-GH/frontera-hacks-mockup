@@ -23,7 +23,7 @@ const sponsor_button_font = Hanken_Grotesk({
 
 export default function HeroSection() {
   return (
-    <div className={`${styles.heroContainer} ml-10 mt-20 h-screen`}>
+    <div className={`${styles.heroContainer} mx-10 mt-20 h-screen`}>
       <div className="min-h-screen -mb-50">
         <Headers />
         <HookText />
@@ -228,13 +228,15 @@ const ScheduleSection = () => {
 
 const SponsorsSection = () => {
   return (
-    <div className={`mt-36`}>
+    <div className={`mt-36 mb-36`}>
       <h1
         className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
       >
         Sponsors
       </h1>
-      <p className={`font-light text-sm justify-self-center text-center`}>
+      <p
+        className={`font-light text-md justify-self-center text-center underline underline-offset-4`}
+      >
         Frontera Hacks is made possible by our wonderful sponsors.
       </p>
       <div className={`mt-12 flex justify-center gap-x-12`}>
@@ -242,22 +244,24 @@ const SponsorsSection = () => {
           <Image
             src="/sponsors/Heb.png"
             alt=""
-            width={152}
-            height={59}
+            width={200}
+            height={200}
             className={``}
           />
         </div>
-        <div>
+        <div className="mt-3">
           <Image
             src="/sponsors/Galaxy.png"
             alt=""
             width={200}
-            height={50}
+            height={200}
             className={``}
           />
         </div>
       </div>
-      <p className={`mt-20 font-light text-sm justify-self-center text-center`}>
+      <p
+        className={`mt-20 font-light text-sm justify-self-center text-center italic`}
+      >
         Want to help make this event a reality?
       </p>
 
@@ -266,7 +270,7 @@ const SponsorsSection = () => {
           className={`bg-white text-black border border-white rounded-full py-1 px-4 block text-center max-w-44 mx-auto`}
           href="mailto:fronteradevs@gmail.com"
         >
-          <p className={`${sponsor_button_font.className} text-xs`}>
+          <p className={`${sponsor_button_font.className} text-xl `}>
             BECOME A SPONSOR{" "}
           </p>
         </Link>
