@@ -1,12 +1,13 @@
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 import type { Metadata } from "next";
 import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-import Navbar from '@/app/components/Navbar/Navbar';
+import Navbar from "@/app/components/Navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 const dm_sans = DM_Sans({
-  subsets: ['latin']
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -25,8 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dm_sans.className} min-h-screen max-h-fit`}>
-        <Navbar/>
-        {children}
+        <UserProvider>
+          <Navbar />
+          {children}
+        </UserProvider>
       </body>
     </html>
   );

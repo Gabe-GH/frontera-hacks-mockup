@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Bruno_Ace, Hanken_Grotesk } from "next/font/google";
 
 import DiscordBtn from "../ui/DiscordBtn";
+import { RegisterBtn } from "./Registerbtn";
 
 import styles from "./HeroSection.module.css";
 import Image from "next/image";

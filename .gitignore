@@ -29,6 +29,7 @@ yarn-error.log*
 # commiting env files is fine AS LONG AS ITS ENCRYPTED
 # refer to https://dotenvx.com/docs/ on encrypting env variables
 .env.keys
+.env.local
 
 # vercel
 .vercel
