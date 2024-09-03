@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Bruno_Ace, Hanken_Grotesk } from "next/font/google";
 
@@ -10,6 +12,7 @@ import { schedule } from "./schedule";
 import { profiles } from "./team";
 
 import honeyStyle from "./honeycomb.module.css";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 const frontera_logo_font = Bruno_Ace({
   weight: "400",
@@ -24,6 +27,8 @@ const sponsor_button_font = Hanken_Grotesk({
 });
 
 export default function HeroSection() {
+  console.log(useUser());
+
   return (
     <div className={`${styles.heroContainer} mx-10 mt-20 h-screen`}>
       <div className="min-h-screen -mb-50">
