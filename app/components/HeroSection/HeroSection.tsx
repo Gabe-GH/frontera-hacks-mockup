@@ -99,17 +99,6 @@ const HookText = () => {
   );
 };
 
-const RegisterBtn = () => {
-  return (
-    <Link
-      className={`${styles.customBtnRadius} btn p-4 md:px-6 md:py-8`}
-      href={"/login"}
-    >
-      <p className={`${styles.btnText} uppercase`}>Register</p>
-    </Link>
-  );
-};
-
 const AboutSection = () => {
   return (
     <>
