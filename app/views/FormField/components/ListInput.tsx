@@ -72,7 +72,7 @@ const ListInput = memo(function ListInputDisplayName(props: GeneralFormType) {
     };
 
     fetchListData();
-  }, []);
+  }, [props.name]);
 
   let LabelText: string;
 
