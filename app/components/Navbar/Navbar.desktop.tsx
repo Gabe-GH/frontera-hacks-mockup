@@ -8,8 +8,6 @@ import { useUser } from "@auth0/nextjs-auth0/client";
 export default function DesktopNavbar(props: any) {
   const { user } = useUser();
 
-  console.log(user);
-
   return (
     <div
       className={`${styles.desktopNavBar} navbar navbar-no-boxShadow bg-transparent pt-8 mb-9`}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 import { createHacker } from "@/app/db/controllers";
 
@@ -25,6 +26,8 @@ import {
 } from "../views/FormField/FormField";
 
 export default function Page() {
+  const router = useRouter();
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -97,12 +100,20 @@ export default function Page() {
     setLoading(true);
     setError(null);
     try {
-      // try making a hacker here
+      // Try making a hacker here
       await createHacker(formData);
-      alert("Hacker created successfully");
+      router.push("/");
     } catch (e) {
-      setError("Failed to create user");
-      alert("UHOH");
+      const error = e as Error;
+      console.error(error.message);
+      if (
+        error.message !== "User already exists" &&
+        error.message !== "Please properly fill out all fields"
+      )
+        setError("Server Error");
+      else {
+        setError(error.message);
+      }
     } finally {
       setLoading(false);
     }
@@ -244,7 +255,7 @@ export default function Page() {
           </div>
           {error && (
             <p className="text-center  text-red-500 bg-gray-900 m-auto">
-              {error}: Please properly fill out all fields
+              Error registering for event: {error}
             </p>
           )}
         </div>
