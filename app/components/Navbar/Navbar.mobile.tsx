@@ -38,7 +38,7 @@ export default function MobileNavbar() {
         <label htmlFor="drawer-right" className="overlay"></label>
 
         {/* everything beyond this point is for the drawer and it's content */}
-        <div className="drawer drawer-right h-auto min-w-48 max-w-56 text-nowrap text-ellipsis">
+        <div className="drawer drawer-right h-auto min-w-48 max-w-56 text-nowrap text-ellipsis bg-zinc-950">
           {/* this is for handling the layout of the contents in the drawer */}
           <div className="flex flex-col justify-end items-end h-full text-right">
             {/* for defining what closes the drawer*/}
