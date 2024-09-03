@@ -2,11 +2,14 @@ import Link from "next/link";
 import { Bruno_Ace, Hanken_Grotesk, Pontano_Sans } from "next/font/google";
 
 import DiscordBtn from "../ui/DiscordBtn";
+import { RegisterBtn } from "./Registerbtn";
 
 import styles from "./HeroSection.module.css";
-import Image from 'next/image';
-import { schedule } from "./schedule"; 
+import Image from "next/image";
+import { schedule } from "./schedule";
 import { profiles } from "./team";
+
+import honeyStyle from "./honeycomb.module.css";
 
 const frontera_logo_font = Bruno_Ace({
   weight: "400",
@@ -14,9 +17,12 @@ const frontera_logo_font = Bruno_Ace({
   display: "swap",
 });
 
-const sponsor_button_font= Hanken_Grotesk({
-  weight: "400"
-})
+const sponsor_button_font = Hanken_Grotesk({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 
 const footer_font= Pontano_Sans({
   weight: "300"
@@ -52,7 +58,6 @@ export default function HeroSection() {
         <Footer/>
       </div>
     </hgroup>
-
   );
 }
 
@@ -98,17 +103,6 @@ const HookText = () => {
   );
 };
 
-const RegisterBtn = () => {
-  return (
-    <Link
-      className={`${styles.customBtnRadius} btn p-4 md:px-6 md:py-8`}
-      href={"/login"}
-    >
-      <p className={`${styles.btnText} uppercase`}>Register</p>
-    </Link>
-  );
-};
-
 const AboutSection = () => {
   return (
     <div className="w-full">
@@ -129,66 +123,78 @@ const AboutSection = () => {
 };
 
 const PillarsSection = () => {
-  return(
-  <>
-  <div className={`${styles.pillarsSection} mt-12 md:mt-20`}></div>
-  <h1 className={` ${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
-  >
-    Pillars
-  </h1>
+  return (
+    <>
+      <div className={`${styles.pillarsSection} mt-12 md:mt-20`}></div>
+      <h1
+        className={` ${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+      >
+        Pillars
+      </h1>
 
-  <div className={'mt-24 flex w-full justify-center gap-x-12'}>
-
-    <div className={`flex flex-col items-center`}>
-    <Image
+      <div className={"mt-24 flex w-full justify-center gap-x-12"}>
+        <div className={`flex flex-col items-center`}>
+          <Image
             src="/connect-pillar-image.png"
             alt="Connect"
-            width={150} 
+            width={150}
             height={150}
             className={styles.pillarImage}
           />
-   <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>Connect</div>
-    <div className={`mt-5 font-light lg:w-4/5`}>Meet developers interested in shaping 
-      the future of innovation at Frontera Hacks</div>
-    </div>
+          <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>
+            Connect
+          </div>
+          <div className={`mt-5 font-light lg:w-4/5`}>
+            Meet developers interested in shaping the future of innovation at
+            Frontera Hacks
+          </div>
+        </div>
 
-    <div className={`flex flex-col items-center`}>
-    <Image
+        <div className={`flex flex-col items-center`}>
+          <Image
             src="/grow-pillar-image.png"
             alt="Grow"
-            width={150} 
-            height={150} 
+            width={150}
+            height={150}
             className={styles.pillarImage}
           />
-   <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>Grow</div>
-   <div className={`mt-5 font-light lg:w-4/5`}>Advance your technical and interpersonal skills through our hands-on workshops</div>
-    </div>
+          <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>
+            Grow
+          </div>
+          <div className={`mt-5 font-light lg:w-4/5`}>
+            Advance your technical and interpersonal skills through our hands-on
+            workshops
+          </div>
+        </div>
 
-    <div className={`flex flex-col items-center`}>
-    <Image
+        <div className={`flex flex-col items-center`}>
+          <Image
             src="/build-pillar-image.png"
             alt="Build"
-            width={150} 
-            height={150} 
+            width={150}
+            height={150}
             className={styles.pillarImage}
           />
-   <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>Build</div>
-   <div className={`mt-5 font-light lg:w-4/5`}>Develop solutions with the potential to aid and impact our community</div>
-    </div>
-  </div>
-  </>
+          <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>
+            Build
+          </div>
+          <div className={`mt-5 font-light lg:w-4/5`}>
+            Develop solutions with the potential to aid and impact our community
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
 const ScheduleSection = () => {
-
-  return(
-    
+  return (
     <div className={`mt-36 md:mt-20 w-full`}>
-     <h1 className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
-  >
-    Schedule
-  </h1>
+      <h1
+        className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+      >
+        Schedule
+      </h1>
 
 <div className= {` mt-12 w-full flex max-md:flex-col gap-x-16`}>
 
@@ -215,7 +221,6 @@ const ScheduleSection = () => {
 </div>
 
   );
-
 };
 
 const SponsorsSection= () => {
@@ -256,140 +261,197 @@ const SponsorsSection= () => {
       Want to help make this event a reality?
        </p>
 
-    <div className={`mt-4`}>
-
-       <Link
-      className={`bg-white text-black border border-white rounded-full py-1 px-4 block text-center max-w-44 mx-auto`}
-      href="mailto:fronteradevs@gmail.com"
-    >
-      <p className={`${sponsor_button_font.className} text-xs`}>
-        BECOME A SPONSOR </p>
-    </Link>
+      <div className={`mt-4`}>
+        <Link
+          className={`bg-white text-black border border-white rounded-full py-1 px-4 block text-center max-w-44 mx-auto`}
+          href="mailto:fronteradevs@gmail.com"
+        >
+          <p className={`${sponsor_button_font.className} text-xl `}>
+            BECOME A SPONSOR{" "}
+          </p>
+        </Link>
+      </div>
     </div>
-    </div>
-  )
-
+  );
 };
 
 const TeamSection = () => {
-return(
-  <div>
-     <h1 
-    className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
-    > 
-    Team 
-    </h1>
+  return (
+    <div className="md:hidden lg:block">
+      <h1
+        className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+      >
+        Team
+      </h1>
 
-    <p className={`font-light text-sm justify-self-center text-center`}>
-    Our team is a vibrant mix of passionate students, each bringing their own unique flavor to the table. Together, we've blended our skills and creativity to brew up an unforgettable hackathon experience. We're here to support, inspire, and cheer you on every step of the way. Feel free to connect with us on LinkedIn!
-    </p>
+      <p className={`font-light text-sm justify-self-center text-center`}>
+        Our team is a vibrant mix of passionate students, each bringing their
+        own unique flavor to the table. Together, we&#39;ve blended our skills
+        and creativity to brew up an unforgettable hackathon experience.
+        We&#39;re here to support, inspire, and cheer you on every step of the
+        way. Feel free to connect with us on LinkedIn!
+      </p>
 
-<div className={`grid grid-cols-7 grid-rows-2`}>
-{profiles.map((profile,idx)=> (
-  
-  <div key={idx} className= {``}>
-    <a href={profile.url} target="_blank" rel="noopener noreferrer">
-    <img 
-        src={profile.folderPath}
-        alt={`Profile ${idx + 1}`}
-       style={{width: '160px', height: '170px'}}
-    />
-    </a>
-  </div>
-))}
-</div>
+      <div
+        className={`grid ${honeyStyle.grid_temp} grid-rows-2 max-w-min mx-auto mt-20 pl-20`}
+      >
+        {profiles.map((profile, idx) => {
+          let gridColumnClass = "";
 
- </div>
- )
+          // Define the grid column class based on the index
+          switch ((idx % 13) + 1) {
+            case 1:
+              gridColumnClass = "col-start-1";
+              break;
+            case 2:
+              gridColumnClass = "col-start-3";
+              break;
+            case 3:
+              gridColumnClass = "col-start-5";
+              break;
+            case 4:
+              gridColumnClass = "col-start-7";
+              break;
+            case 5:
+              gridColumnClass = "col-start-9";
+              break;
+            case 6:
+              gridColumnClass = "col-start-11";
+              break;
+            case 7:
+              gridColumnClass = "col-start-13";
+              break;
+            case 8:
+              gridColumnClass = "col-start-2";
+              break;
+            case 9:
+              gridColumnClass = "col-start-4";
+              break;
+            case 10:
+              gridColumnClass = "col-start-6";
+              break;
+            case 11:
+              gridColumnClass = "col-start-8";
+              break;
+            case 12:
+              gridColumnClass = "col-start-10";
+              break;
+            case 13:
+              gridColumnClass = "col-start-12";
+              break;
+            default:
+              gridColumnClass = "";
+              break;
+          }
+
+          return (
+            <div
+              key={idx}
+              className={`${gridColumnClass} ${honeyStyle.items} min-w-max flex justify-center items-center`}
+              id="item"
+            >
+              <a href={profile.url} target="_blank" rel="noopener noreferrer">
+                <Image
+                  width={160}
+                  height={170}
+                  src={profile.folderPath}
+                  alt={`Profile ${idx + 1}`}
+                />
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
 const FaqSection = () => {
-return(
-  <div>
-     <h1 
-    className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
-    > 
-    Fequently Asked Questions 
-    </h1>
+  const faqStyle = "font-black text-xl underline underline-offset-4 mb-1";
 
-    <div className={'mt-10 grid grid-cols-2 justify-center gap-x-12'}>
-      
-      <div>
-      <div className={`${styles.subtitleText} flex flex-col text-xl font-bold`}>
-      What is a hackathon?
-      </div>
-      <div className={`text-sm`}>
-        A hackathon is a sprint-like event where developers collaborate to build projects that solve challenges. At Frontera Hacks, 
-        hackers can look forward to educational workshops, learning from skilled mentors, and, of course, fun games and great swag.
+  return (
+    <div className="sm:pb-40 md:pb-0">
+      <h1
+        className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+      >
+        Fequently Asked Questions
+      </h1>
+
+      <div className={"mt-10 grid grid-cols-2 justify-center gap-x-12"}>
+        <div className={`flex flex-col`}>
+          <span className={faqStyle}>What is a hackathon?</span>
+          <div className={`text-sm`}>
+            A hackathon is a sprint-like event where developers collaborate to
+            build projects that solve challenges. At Frontera Hacks, hackers can
+            look forward to educational workshops, learning from skilled
+            mentors, and, of course, fun games and great swag.
+          </div>
+        </div>
+
+        <div className={`flex flex-col`}>
+          <span className={faqStyle}>What is the cost to participate?</span>
+          <div className={`text-sm`}>
+            Nada, nothing, zilch. There is absolutely no cost for applying or
+            participating in Frontera Hacks. We want to make this event as
+            accessible as possible to all those interested so make sure you
+            apply!
+          </div>
+        </div>
+
+        <div className={`mt-5 flex flex-col`}>
+          <span className={faqStyle}>Who is this event for?</span>
+          <div className={`text-sm`}>
+            Students from all backgrounds are welcome at Frontera Hacks. No
+            extensive knowledge of programming is necessary.
+          </div>
+        </div>
+
+        <div className={` mt-5 flex flex-col`}>
+          <span className={faqStyle}>What if I don’t know how to code?</span>
+          <div className={`text-sm`}>
+            No experience is needed — whether you&#39;re a coder, an artist, a
+            designer, or a writer, you&#39;ll get a chance to work with various
+            mentors, attend workshops, interact with companies, and learn
+            alongside fellow participants.
+          </div>
+        </div>
+
+        <div className={`flex flex-col`}>
+          <span className={faqStyle}>Do I need a team to participate?</span>
+          <div className={`text-sm`}>
+            While teams are not required in order to participate, it’s a great
+            way to meet new people and create something together. Teams may have
+            up to 4 members, and you will have a chance to meet other hackers at
+            our Team Formation events and in the Discord server!
+          </div>
+        </div>
+
+        <div className={`mt-5 flex flex-col`}>
+          <span className={faqStyle}>
+            What if I need special accomodations?
+          </span>
+          <div className={`text-sm`}>
+            Frontera Hacks prioritizes accessibility and accomodations that make
+            our event welcoming for everyone. Please list any special
+            accommodations in your admissions, or contact us with any other
+            concerns.
+          </div>
         </div>
       </div>
-
-      <div>
-      <div className={`${styles.subtitleText} flex flex-col text-xl font-bold`}>
-      What is the cost to participate?
-      </div>
-      <div className={`text-sm`}>
-        Nada, nothing, zilch. There is absolutely no cost for applying or participating in Frontera Hacks. 
-        We want to make this event as accessible as possible to all those interested so make sure you apply!
-      </div>
-      </div>
-
-      <div>
-      <div className={`${styles.subtitleText} mt-5 flex flex-col text-xl font-bold`}>
-      Who is this event for?
-      </div>
-      <div className={`text-sm`}>
-        Students from all backgrounds are welcome at Frontera Hacks. No extensive knowledge of programming is necessary.
-        </div>
-      </div>
-
-      <div>
-      <div className={` ${styles.subtitleText} mt-5 flex flex-col text-xl font-bold`}>
-      What if I don’t know how to code?
-      </div>
-      <div className={`text-sm`}>
-        No experience is needed — whether you're a coder, an artist, a designer, or a writer, 
-        you'll get a chance to work with various mentors, attend workshops, interact with companies, and learn alongside fellow participants.
-        </div>
-      </div>
-
-      <div>
-      <div className={`${styles.subtitleText} flex flex-col text-xl font-bold`}>
-      Do I need a team to participate?
-      </div>
-      <div className={`text-sm`}>
-        While teams are not required in order to participate, it’s a great way to meet new people and create something together. 
-        Teams may have up to 4 members, and you will have a chance to meet other hackers at our Team Formation events and in the Discord server!
-        </div>
-      </div>
-
-      <div>
-      <div className={`${styles.subtitleText} mt-5 flex flex-col text-xl font-bold`}>
-      What if I need special accomodations?
-      </div>
-      <div className={`text-sm`}>
-        Frontera Hacks prioritizes accessibility and accomodations that make our event welcoming for everyone. 
-        Please list any special accommodations in your admissions, or contact us with any other concerns.
-        </div>
-      </div>
-
     </div>
-
-  </div>
-) 
+  );
 };
 
-const VenueSection= () => {
-  return(
-    <div>
+const VenueSection = () => {
+  return (
+    <div className="pb-40 md:hidden lg:block">
+      <h1
+        className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
+      >
+        Venue
+      </h1>
 
-      <h1 
-    className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
-    > 
-    Venue 
-    </h1>
-
-    <div className={`relative`}>
+      <div className={`relative`}>
         <Image
         src= "/venue_location_border.png"
         alt=""
@@ -420,7 +482,7 @@ const VenueSection= () => {
           height={450}
           className={`absolute top-0 left-0 pointer-events-none`}
           />
-          </div>
+        </div>
 
           <div className={`lg:ml-96 flex flex-col justify-center`}>
           <h1 className={`${frontera_logo_font.className}  ${styles.venueFaqText} max-lg:mt-5  mt-1 text-2xl lg:ml-80`}> Where do I park?</h1>
@@ -518,7 +580,5 @@ const Footer= () => {
       </div>
   
     </div>
-  )
-}
-
-
+  );
+};

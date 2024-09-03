@@ -12,11 +12,11 @@ export default function DiscordBtn() {
       rel="noopener noreferrer"
     >
       <Image
-        src={"discord_icon.svg"}
-        width={5}
-        height={5}
-        className={`${styles.discordIcon}`}
-        alt=""
+      src={"discord_icon.svg"}
+      width={5}
+      height={5}
+      className={`${styles.discordIcon}`}
+      alt=""
       />
     </a>
   );
