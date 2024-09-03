@@ -381,7 +381,7 @@ const FaqSection = () => {
   const faqStyle = "font-black text-xl underline underline-offset-4 mb-1";
 
   return (
-    <div className="sm:pb-40 md:pb-40 lg:pb-0 lg:mb-40">
+    <div className="pb-40 lg:pb-0 lg:mb-40">
       <h1
         className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
       >

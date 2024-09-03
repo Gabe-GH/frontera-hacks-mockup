@@ -3,6 +3,7 @@ import type { Config } from "tailwindcss";
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
+  dark: "selector",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -27,20 +28,14 @@ module.exports = {
     themes: [
       {
         themeName: "dark",
-        colorScheme: "light",
-        colors: {
-          primary: "#573242",
-          backgroundPrimary: "#000000",
-        },
-      },
-      {
-        themeName: "dark",
         colorScheme: "dark",
+        prefersColorScheme: true,
         colors: {
           primary: "#573242",
           backgroundPrimary: "#000000",
         },
       },
     ],
+    removeThemes: ["light"],
   },
 };
