@@ -102,7 +102,7 @@ export default function Page() {
     try {
       // Try making a hacker here
       await createHacker(formData);
-      router.push("/");
+      router.push("/me");
     } catch (e) {
       const error = e as Error;
       console.error(error.message);
