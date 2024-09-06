@@ -12,7 +12,6 @@ import { schedule } from "./schedule";
 import { profiles } from "./team";
 
 import honeyStyle from "./honeycomb.module.css";
-import { useUser } from "@auth0/nextjs-auth0/client";
 
 const frontera_logo_font = Bruno_Ace({
   weight: "400",
