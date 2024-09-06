@@ -11,10 +11,6 @@ export default async function Me() {
 
   const isRegistered = await findHacker(currentUser.email);
 
-  // Log the current user to the console
-  console.log(currentUser);
-  console.log("HERE");
-
   return (
     <div className="text-xl flex flex-col h-svh">
       {isRegistered && (
