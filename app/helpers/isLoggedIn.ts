@@ -13,8 +13,6 @@ export async function GetUser() {
 
   if (!session) return { user: null };
 
-  console.log(session);
-
   const user: Claims = session.user;
 
   return user;
