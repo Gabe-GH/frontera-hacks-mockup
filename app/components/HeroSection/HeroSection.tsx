@@ -133,7 +133,7 @@ const PillarsSection = () => {
         Pillars
       </h1>
 
-      <div className={"mt-24 max-md:mt-16 flex w-full justify-center gap-x-12 max-md:flex-col"}>
+      <div className={"mt-20 max-md:mt-16 flex w-full justify-center gap-x-12 max-md:flex-col"}>
         
         <div className={`flex flex-col items-center md:mt-6`}>
           <Image
@@ -143,10 +143,10 @@ const PillarsSection = () => {
             height={150}
             className={styles.pillarImage}
           />
-          <div className={`${frontera_logo_font.className} mt-1 text-3xl max-md:text-lg`}>
+          <div className={`${frontera_logo_font.className} mt-1 text-3xl max-md: text-lg`}>
             Connect
           </div>
-          <div className={`mt-5 font-light  max-md:mt-1 max-md:text-xs max-md:w-1/2 lg:w-4/5 xl:w-full`}>
+          <div className={`mt-5 font-light  max-md: mt-1 max-md: text-xs max-md:w-1/2 lg:w-4/5 xl:w-full`}>
             Meet developers interested in shaping the future of innovation at
             Frontera Hacks
           </div>
@@ -160,10 +160,10 @@ const PillarsSection = () => {
             height={150}
             className={styles.pillarImage}
           />
-          <div className={`${frontera_logo_font.className} mt-1 text-3xl max-md:text-lg`}>
+          <div className={`${frontera_logo_font.className} mt-1 text-3xl max-md: text-lg`}>
             Grow
           </div>
-          <div className={`mt-5 font-light  max-md:mt-1  max-md:text-xs max-md:w-1/2 lg:w-4/5 xl:w-full`}>
+          <div className={`mt-5 font-light  max-md: mt-1  max-md: text-xs max-md:w-1/2 lg:w-4/5 xl:w-full`}>
             Advance your technical and interpersonal skills through our hands-on
             workshops
           </div>
@@ -177,10 +177,10 @@ const PillarsSection = () => {
             height={150}
             className={styles.pillarImage}
           />
-          <div className={`${frontera_logo_font.className} mt-1 text-3xl max-md:text-lg`}>
+          <div className={`${frontera_logo_font.className} mt-1 text-3xl max-md: text-lg`}>
             Build
           </div>
-          <div className={`mt-5 font-light  max-md:mt-1 max-md:text-xs max-md:w-1/2 lg:w-4/5 xl:w-full`}>
+          <div className={`mt-5 font-light  max-md: mt-1 max-md: text-xs max-md:w-1/2 lg:w-4/5 xl:w-full`}>
             Develop solutions with the potential to aid and impact our community
           </div>
         </div>
@@ -237,7 +237,7 @@ const SponsorsSection= () => {
     >
       Frontera Hacks is made possible by our wonderful sponsors.
     </p>
-    <div className={`mt-12 flex justify-center gap-x-12 max-md:text-xs max-md:flex-col items-center gap-y-10`}>
+    <div className={`mt-12 grid grid-cols-3 gap-y-10 place-items-center max-md:grid-cols-1`}>
         <Image
         src="/sponsors/Heb.png"
         alt=""
@@ -252,11 +252,32 @@ const SponsorsSection= () => {
          height={50}
          className={``}
         />
-        <Image
+          <Image
+        src="/sponsors/HackerRank.png"
+        alt=""
+        width={120}
+        height={50}
+        className={``}
+        />
+         <Image
+        src="/sponsors/CodePath.png"
+        alt=""
+        width={445}
+        height={40}
+        className={`max-sm:w-72`}
+        />
+         <Image
         src="/sponsors/StandOutStickers.png"
         alt=""
         width={122}
         height={60}
+        className={``}
+        />
+        <Image
+        src="/sponsors/GitHub.png"
+        alt=""
+        width={190}
+        height={53}
         className={``}
         />
     </div>
@@ -298,7 +319,7 @@ const TeamSection = () => {
       </p>
 
       <div
-        className={`grid ${honeyStyle.grid_temp} lg:grid-rows-2  max-w-min mx-auto mt-20 xl:pl-7`}
+        className={`grid ${honeyStyle.grid_temp} lg:grid-rows-2 max-w-min mx-auto mt-20 xl:pl-7`}
       >
         {profiles.map((profile, idx) => {
           let gridColumnClass = "";
@@ -477,7 +498,6 @@ const VenueSection = () => {
           height={450}
           className={`absolute top-0 left-0`}
           />
-
           <Image 
           src= "/weird-shape.png"
           alt="Border"
@@ -493,7 +513,7 @@ const VenueSection = () => {
           Lots E16 or E21 are closest to the Engineering 
           building. These are along 4th Ave.
              </p>
-          <h1 className={`${frontera_logo_font.className} ${styles.venueFaqText} text-2xl lg:ml-48 lg:mt-20 xl:ml-52 xl:mt-20 lg:text-xl`}>Extra Information</h1>
+          <h1 className={`${frontera_logo_font.className} ${styles.venueFaqText} text-2xl lg:ml-40 lg:mt-10 xl:ml-52 xl:mt-20 lg:text-xl`}>Extra Information</h1>
           <p className={`mt-1 lg:ml-40 xl:ml-40 max-w-80 lg:text-sm`}>
           Enter through the door closest to the science building. Check-in will be in the lobby. 
           The building has ample space and internet connectivity. 
