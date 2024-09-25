@@ -196,7 +196,7 @@ const PillarsSection = () => {
 
 const ScheduleSection = () => {
   return (
-    <div className={`pt-36 md:mt-20 w-full`} id="schedule">
+    <div className={`pt-36 md:mt-20 w-full hidden`} id="schedule">
       <h1
         className={`${frontera_logo_font.className} mr-10 my-4 md:my-10 text-5xl`}
       >
