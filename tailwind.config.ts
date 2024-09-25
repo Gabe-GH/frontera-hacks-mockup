@@ -3,7 +3,7 @@ import type { Config } from "tailwindcss";
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  dark: "selector",
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -31,9 +31,10 @@ module.exports = {
         colorScheme: "dark",
         prefersColorScheme: true,
         colors: {
-          primary: "#573242",
+          primary: "#572647",
           backgroundPrimary: "#000000",
         },
+        default: true,
       },
     ],
     removeThemes: ["light"],
