@@ -134,6 +134,7 @@ export default function Page() {
     <form
       className="mx-auto flex w-full max-w-sm flex-col gap-6"
       onSubmit={handleSubmit}
+      autoComplete="off"
     >
       {/* Form Header */}
       <FormHeader header_text={`Register for Frontera Hacks`} />
