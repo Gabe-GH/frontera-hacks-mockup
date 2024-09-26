@@ -41,7 +41,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  viewport: "width=device-width, initial-scale=1",
   icons: {
     icon: "/favicon.ico", // Your favicon path
   },
@@ -56,7 +55,6 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark">
       <head>
-        <meta charSet="UTF-8" />
       </head>
       <body className={`${dm_sans.className} min-h-screen max-h-fit`}>
         <UserProvider>
