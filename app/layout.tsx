@@ -30,11 +30,11 @@ export const metadata: Metadata = {
     title: "Frontera Hacks",
     description:
       "Join Frontera Hacks, a 24-hour hackathon empowering developers of all skill levels to collaborate, innovate, and accelerate tech in the Rio Grande Valley.",
-    url: "/meta_banner.png",
+    url: "https://fronterahacks.org",
     type: "website",
     images: [
       {
-        url: "/meta_banner.png", // Update with actual image URL
+        url: "https://i.imgur.com/aSCItLE.png",
         width: 1200,
         height: 630,
         alt: "Frontera Hacks banner",
