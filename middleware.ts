@@ -6,15 +6,23 @@ import {
   getSession,
 } from "@auth0/nextjs-auth0/edge";
 
+const isRegistrationOpen = false;
+
 // Custom Middleware Function
 export default async function middleware(req: any, ev: any) {
   const { pathname } = req.nextUrl;
+
+  if (pathname.startsWith("/register") && !isRegistrationOpen)
+    return NextResponse.redirect(new URL("/", req.url));
+
+  if (pathname.startsWith("/example"))
+    return NextResponse.redirect(new URL("/", req.url));
 
   // Apply Auth0's authentication check
   const res = await withMiddlewareAuthRequired()(req, ev);
 
   // Completely disallow access to '/admin' if user doesn't have the right permissions
-  if (pathname === "/admin" || pathname === "/example") {
+  if (pathname.startsWith("/admin")) {
     // Get the user's session data
     const session = await getSession();
 
@@ -31,5 +39,5 @@ export default async function middleware(req: any, ev: any) {
 
 // Configure the matcher to apply middleware to all routes except home
 export const config = {
-  matcher: ["/register", "/me"], // Protect all routes except home route '/'
+  matcher: ["/register", "/me", "/example", "/admin"], // Protect all routes except home route '/'
 };
