@@ -34,7 +34,7 @@ export default function HeroSection() {
         <div
           className={`flex mt-6 w-40 justify-between md:justify-between md:w-64`}
         >
-          <RegisterBtn />
+          <RegisterBtn isRegistrationOpen={false} />
           <DiscordBtn />
         </div>
       </div>

@@ -6,17 +6,33 @@ import { useUser } from "@auth0/nextjs-auth0/client";
 
 import styles from "./HeroSection.module.css";
 
-export const RegisterBtn = () => {
+interface RegisterActive {
+  isRegistrationOpen: boolean;
+}
+
+export const RegisterBtn = (props: RegisterActive) => {
   const { user } = useUser();
 
   const redirectLink = user ? "/register" : "/api/auth/signup";
 
-  return (
-    <Link
-      className={`${styles.customBtnRadius} btn p-4 md:px-6 md:py-8`}
-      href={redirectLink}
-    >
-      <p className={`${styles.btnText} uppercase`}>Register</p>
-    </Link>
-  );
+  if (props.isRegistrationOpen) {
+    return (
+      <Link
+        className={`${styles.customBtnRadius} btn p-4 md:px-6 md:py-8`}
+        href={redirectLink}
+      >
+        <p className={`${styles.btnText} uppercase`}>Register</p>
+      </Link>
+    );
+  } else {
+    return (
+      <div
+        className={`${styles.customBtnRadiusDisabled} btn p-4 md:px-6 md:py-8 cursor-not-allowed`}
+      >
+        <p className={`${styles.btnTextDisabled} uppercase`}>
+          Registration Closed
+        </p>
+      </div>
+    );
+  }
 };
