@@ -24,15 +24,13 @@ export default async function middleware(req: any, ev: any) {
 
   // Completely disallow access to '/admin' if user doesn't have the right permissions
   if (pathname.startsWith("/admin")) {
+    return NextResponse.redirect(new URL("/", req.url));
+
     // Get the user's session data
-    const session = await getSession();
-
-    console.log(session?.user);
-
+    // const session = await getSession();
+    // console.log(session);
     // const admin = await findHacker(session?.user.email);
-
     // console.log(admin);
-
     // Check if the session exists and user has the 'admin' role
     // if (!session || !session.user || !session.user.roles.includes("admin")) {
     //   // Completely disallow access by returning a 403 Forbidden response

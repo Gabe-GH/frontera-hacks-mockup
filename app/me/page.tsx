@@ -25,7 +25,7 @@ export default async function Me() {
       {!isRegistered && (
         <div className="m-auto h-1/5 flex flex-col justify-around content-center">
           <p className="text-center">You don&#39;t seem to be registered 😓</p>
-          <p className="text-center">It&#39;s not too late! Register now ❤️</p>
+          <p className="text-center">Be sure to check us out next time! ❤️</p>
           <div className="w-min mt-30 self-center">
             <RegisterBtn isRegistrationOpen={false} />
           </div>
