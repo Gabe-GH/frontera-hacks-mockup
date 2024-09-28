@@ -5,6 +5,7 @@ import {
   withMiddlewareAuthRequired,
   getSession,
 } from "@auth0/nextjs-auth0/edge";
+import { findHacker } from "./app/db/controllers";
 
 const isRegistrationOpen = false;
 
@@ -26,11 +27,17 @@ export default async function middleware(req: any, ev: any) {
     // Get the user's session data
     const session = await getSession();
 
+    console.log(session?.user);
+
+    // const admin = await findHacker(session?.user.email);
+
+    // console.log(admin);
+
     // Check if the session exists and user has the 'admin' role
-    if (!session || !session.user || !session.user.roles.includes("admin")) {
-      // Completely disallow access by returning a 403 Forbidden response
-      return NextResponse.rewrite(new URL("/403", req.url)); // Or handle by redirecting to a "403 Forbidden" page
-    }
+    // if (!session || !session.user || !session.user.roles.includes("admin")) {
+    //   // Completely disallow access by returning a 403 Forbidden response
+    //   return NextResponse.rewrite(new URL("/403", req.url)); // Or handle by redirecting to a "403 Forbidden" page
+    // }
   }
 
   // If all checks pass, continue with the request
