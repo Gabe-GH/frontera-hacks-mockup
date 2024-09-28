@@ -27,7 +27,7 @@ export default async function Me() {
           <p className="text-center">You don&#39;t seem to be registered 😓</p>
           <p className="text-center">It&#39;s not too late! Register now ❤️</p>
           <div className="w-min mt-30 self-center">
-            <RegisterBtn />
+            <RegisterBtn isRegistrationOpen={false} />
           </div>
         </div>
       )}
