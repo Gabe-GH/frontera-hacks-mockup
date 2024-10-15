@@ -1,14 +1,10 @@
 import { UserProvider } from "@auth0/nextjs-auth0/client";
 import type { Metadata } from "next";
-import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/app/components/Navbar/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
-const dm_sans = DM_Sans({
-  subsets: ["latin"],
-});
+import { dm_sans } from "@/app/fonts";
 
 export const metadata: Metadata = {
   title: {
@@ -54,8 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="dark">
-      <head>
-      </head>
+      <head></head>
       <body className={`${dm_sans.className} min-h-screen max-h-fit`}>
         <UserProvider>
           <Navbar />
