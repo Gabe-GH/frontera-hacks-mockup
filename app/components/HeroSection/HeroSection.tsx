@@ -243,26 +243,50 @@ const SponsorsSection = () => {
       >
         Frontera Hacks is made possible by our wonderful sponsors.
       </p>
-      <div className={`mt-12 flex justify-center gap-x-12`}>
-        <div>
+      <div className={`mt-12 grid grid-cols-3 gap-y-10 gap-x-5 place-items-center max-md:grid-cols-1`}>
           <Image
-            src="/sponsors/Heb.png"
-            alt=""
-            width={200}
-            height={200}
-            className={``}
-          />
-        </div>
-        <div className="mt-3">
+        src="/sponsors/Google.png"
+        alt=""
+        width={170}
+        height={70}
+        className={``}
+        />
           <Image
-            src="/sponsors/Galaxy.png"
-            alt=""
-            width={200}
-            height={200}
-            className={``}
-          />
-        </div>
-      </div>
+        src="/sponsors/HackerRank.png"
+        alt=""
+        width={400}
+        height={50}
+        className={``}
+        />
+         <Image
+        src="/sponsors/Heb.png"
+        alt=""
+        width={160} 
+        height={60}
+        className={``}
+        />
+        <Image
+         src="/sponsors/Galaxy.png"
+         alt=""
+         width={200} 
+         height={50}
+         className={``}
+        />
+         <Image
+        src="/sponsors/CodePath.png"
+        alt=""
+        width={445}
+        height={40}
+        className={`max-sm:w-72`}
+        />
+        <Image
+        src="/sponsors/MasterStitch.png"
+        alt=""
+        width={190}
+        height={53}
+        className={``}
+        />
+    </div>
       <p
         className={`mt-20 font-light text-sm justify-self-center text-center italic`}
       >
@@ -274,7 +298,7 @@ const SponsorsSection = () => {
           className={`bg-white text-black border border-white rounded-full py-1 px-4 block text-center max-w-44 mx-auto`}
           href="mailto:fronteradevs@gmail.com"
         >
-          <p className={`${sponsor_button_font.className} text-xl `}>
+          <p className={`${sponsor_button_font.className} text-xs `}>
             BECOME A SPONSOR{" "}
           </p>
         </Link>
