@@ -139,8 +139,9 @@ const PillarsSection = () => {
         Pillars
       </h1>
 
-      <div className={"mt-24 flex w-full justify-center gap-x-12"}>
-        <div className={`flex flex-col items-center`}>
+      <div className={"mt-20 max-md:mt-16 flex w-full justify-center gap-x-12 max-md:flex-col"}>
+        
+        <div className={`flex flex-col items-center md:mt-6`}>
           <Image
             src="/connect-pillar-image.png"
             alt="Connect"
@@ -148,16 +149,16 @@ const PillarsSection = () => {
             height={150}
             className={styles.pillarImage}
           />
-          <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>
+          <div className={`${frontera_logo_font.className} mt-1 text-3xl max-md: text-lg`}>
             Connect
           </div>
-          <div className={`mt-5 font-light lg:w-4/5`}>
+          <div className={`mt-5 font-light  max-md: mt-1 max-md: text-xs max-md:w-1/2 lg:w-4/5 xl:w-full`}>
             Meet developers interested in shaping the future of innovation at
             Frontera Hacks
           </div>
         </div>
 
-        <div className={`flex flex-col items-center`}>
+        <div className={`flex flex-col items-center max-md: mt-6`}>
           <Image
             src="/grow-pillar-image.png"
             alt="Grow"
@@ -165,16 +166,16 @@ const PillarsSection = () => {
             height={150}
             className={styles.pillarImage}
           />
-          <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>
+          <div className={`${frontera_logo_font.className} mt-1 text-3xl max-md: text-lg`}>
             Grow
           </div>
-          <div className={`mt-5 font-light lg:w-4/5`}>
+          <div className={`mt-5 font-light  max-md: mt-1  max-md: text-xs max-md:w-1/2 lg:w-4/5 xl:w-full`}>
             Advance your technical and interpersonal skills through our hands-on
             workshops
           </div>
         </div>
 
-        <div className={`flex flex-col items-center`}>
+        <div className={`flex flex-col items-center max-md: mt-6`}>
           <Image
             src="/build-pillar-image.png"
             alt="Build"
@@ -182,10 +183,10 @@ const PillarsSection = () => {
             height={150}
             className={styles.pillarImage}
           />
-          <div className={`${frontera_logo_font.className} mt-1 text-3xl`}>
+          <div className={`${frontera_logo_font.className} mt-1 text-3xl max-md: text-lg`}>
             Build
           </div>
-          <div className={`mt-5 font-light lg:w-4/5`}>
+          <div className={`mt-5 font-light  max-md: mt-1 max-md: text-xs max-md:w-1/2 lg:w-4/5 xl:w-full`}>
             Develop solutions with the potential to aid and impact our community
           </div>
         </div>
