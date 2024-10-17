@@ -492,17 +492,12 @@ const VenueSection = () => {
 
       <div className={`relative`}>
         <Image
-          src="/veune_location_title.png"
+          src="/venue-location.png"
           alt=""
           width={1157}
           height={158}
           className={`block`}
         />
-        <h1
-          className={`absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-bold whitespace-nowrap 2xl:left-1/3`}
-        >
-          UTRGV Edinburg Engineering Building (EENGR)
-        </h1>
       </div>
 
       <div className={``}>
