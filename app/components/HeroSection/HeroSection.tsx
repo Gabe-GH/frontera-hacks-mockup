@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Bruno_Ace, Hanken_Grotesk } from "next/font/google";
+import { Bruno_Ace, Hanken_Grotesk, Pontano_Sans } from "next/font/google";
 
 import DiscordBtn from "../ui/DiscordBtn";
 import { RegisterBtn } from "./Registerbtn";
@@ -17,6 +17,11 @@ const frontera_logo_font = Bruno_Ace({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
+});
+
+
+const footer_font= Pontano_Sans({
+  weight: "300"
 });
 
 const sponsor_button_font = Hanken_Grotesk({
@@ -59,6 +64,7 @@ export default function HeroSection() {
       <div>
         <VenueSection />
       </div>
+      <Footer />
     </div>
   );
 }
@@ -541,6 +547,75 @@ const VenueSection = () => {
             life! Happy hacking!
           </p>
         </div>
+      </div>
+    </div>
+  );
+};
+
+const Footer= () => {
+  return(
+    <div>
+    <div className={`${frontera_logo_font.className} mt-28 text-center text-4xl max-md:text-2xl`}>
+      <h1>
+        frontera hacks
+      </h1>
+      
+
+    </div>
+    <div className={`mt-5 flex flex-row justify-center md:gap-x-10 max-sm:gap-x-6`}>
+
+      <a href="https://discord.gg/XfjsWxPgBj">
+        <Image
+        src="/footer_images/discord.png"
+        alt=""
+        width={37} 
+        height={40}
+        className={``} />
+      </a>
+
+      <a href="https://x.com/fronteradevsrgv">
+        <Image
+        src="/footer_images/twitter.png"
+        alt=""
+        width={37} 
+        height={40}
+        className={``} />
+      </a>
+
+      <a href="https://www.facebook.com/people/Frontera-Hacks/pfbid05mq7GpLNvxvwoCtZH1V2VQY2tFPxwFEh6EXKvjJsvKWWq9jXAi7WYVU8V4CTkrPwl/">
+       <Image
+        src="/footer_images/facebook.png"
+        alt=""
+        width={37} 
+        height={40}
+        className={``} />
+      </a>
+
+      <a href= "https://www.instagram.com/fronterahacks/">
+       <Image
+        src="/footer_images/instagram.png"
+        alt=""
+        width={37} 
+        height={40}
+        className={``} />
+      </a>
+
+       <a href= "https://www.youtube.com/@fronteradevsutrgv3696 ">
+       <Image
+        src="/footer_images/youtube.png"
+        alt=""
+        width={37} 
+        height={40}
+        className={``} />
+        </a>
+      </div>
+
+      <div>
+        <p className={`${footer_font.className} mt-4 text-center max-md:text-xs`}>
+        © 2024 Frontera Hacks. Made with ♡ by the Frontera Devs team
+        </p>
+      </div>
+      <div className="mt-4">
       </div>
     </div>
   );
