@@ -100,3 +100,28 @@ export async function findHacker(email: string): Promise<boolean> {
     }
   }
 }
+
+export async function findHackerByEmail(email: string): Promise<any> {
+  try {
+    const client = await clientPromise;
+
+    const db =
+      process.env.NODE_ENV === "production"
+        ? client.db("fronteraHacks24")
+        : client.db("test_fronteraHacks24");
+
+    const hackersCollection = db.collection("hackers");
+
+    const user = await hackersCollection.findOne({ email });
+
+    return user ? user : new Error("ow");
+  } catch (e) {
+    const error = e as Error;
+
+    if (error.message === "User already exists") throw e;
+    else {
+      console.error(error);
+      throw new Error("Database error");
+    }
+  }
+}
