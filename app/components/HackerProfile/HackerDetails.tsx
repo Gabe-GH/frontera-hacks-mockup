@@ -21,7 +21,12 @@ const HackerDetails = (props: any) => {
           <RenderQR qrcode={user.qrcode} size={300} />
         </div>
         <div className="pb-10 text-xl">
-          <p>{`Status: ${user.status}`}</p>
+          {user.checked_in ? (
+            <p>{`Status: Checked-In`}</p>
+          ) : (
+            <p>{`Status: Registered`}</p>
+          )}
+
           <p>{`Email: ${user.email}`}</p>
         </div>
       </div>

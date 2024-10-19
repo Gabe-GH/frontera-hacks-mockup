@@ -5,7 +5,7 @@ import {
   withMiddlewareAuthRequired,
   getSession,
 } from "@auth0/nextjs-auth0/edge";
-import { findHacker } from "./app/db/controllers";
+// import { findHacker } from "./app/db/controllers";
 
 const isRegistrationOpen = false;
 
@@ -24,8 +24,7 @@ export default async function middleware(req: any, ev: any) {
 
   // Completely disallow access to '/admin' if user doesn't have the right permissions
   if (pathname.startsWith("/admin")) {
-    return NextResponse.redirect(new URL("/", req.url));
-
+    // return NextResponse.redirect(new URL("/", req.url));
     // Get the user's session data
     // const session = await getSession();
     // console.log(session);
@@ -44,5 +43,5 @@ export default async function middleware(req: any, ev: any) {
 
 // Configure the matcher to apply middleware to all routes except home
 export const config = {
-  matcher: ["/register", "/me", "/example", "/admin"], // Protect all routes except home route '/'
+  matcher: ["/register", "/me", "/example"], // Protect all routes except home route '/'
 };
