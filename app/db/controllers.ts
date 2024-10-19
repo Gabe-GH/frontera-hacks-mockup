@@ -4,8 +4,9 @@ import clientPromise from "./mongodb";
 
 import { generateQRCode } from "../util/GenerateQRCode";
 import { hackerSchema } from "./schema/hacker";
+import { ObjectId } from "mongodb";
 
-interface hackerFormData {
+export interface hackerFormData {
   firstName: string;
   lastName: string;
   age: string | number;
@@ -90,6 +91,41 @@ export async function findHacker(email: string): Promise<boolean> {
     const userExists = await hackersCollection.findOne({ email });
 
     return userExists ? true : false;
+  } catch (e) {
+    const error = e as Error;
+
+    if (error.message === "User already exists") throw e;
+    else {
+      console.error(error);
+      throw new Error("Database error");
+    }
+  }
+}
+
+export async function findHackerById(id: string): Promise<any> {
+  try {
+    const client = await clientPromise;
+
+    const db =
+      process.env.NODE_ENV === "production"
+        ? client.db("fronteraHacks24")
+        : client.db("test_fronteraHacks24");
+
+    const hackersCollection = db.collection("hackers");
+
+    // Convert string ID to ObjectId
+    const objectId = new ObjectId(id);
+
+    const userExists = await hackersCollection.findOne({ _id: objectId });
+
+    console.log(userExists);
+
+    const user = {
+      ...userExists,
+      _id: userExists?._id.toString(),
+    };
+
+    return userExists ? user : null;
   } catch (e) {
     const error = e as Error;
 
