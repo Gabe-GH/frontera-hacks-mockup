@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Bruno_Ace, Hanken_Grotesk } from "next/font/google";
 
 import DiscordBtn from "../ui/DiscordBtn";
 import { RegisterBtn } from "./Registerbtn";
@@ -13,17 +12,7 @@ import { profiles } from "./team";
 
 import honeyStyle from "./honeycomb.module.css";
 
-const frontera_logo_font = Bruno_Ace({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const sponsor_button_font = Hanken_Grotesk({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
+import { frontera_logo_font, sponsor_button_font } from "@/app/fonts";
 
 export default function HeroSection() {
   return (
